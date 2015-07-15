@@ -1,0 +1,11 @@
+[Unit]
+Description=Areto Proxy
+After=network.target
+
+[Service]
+Type=simple
+PIDFile=/run/areto-proxy.pid
+ExecStart=/opt/areto-ui/proxy/areto-proxy
+
+[Install]
+WantedBy=multi-user.target
