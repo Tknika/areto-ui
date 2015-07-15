@@ -14,6 +14,9 @@ import client_module
 
 
 class Application(object):
+    
+    client=None
+    
     def __init__(self):
         print ("Application haseratu da.....")
         self.buffer = []
@@ -46,6 +49,7 @@ class Application(object):
             return [data]
 
         if path.startswith("socket.io"):
+            
             socketio_manage(environ, {'': ParaninfoNamespace}, self.request)
         else:
             return self.not_found(start_response)
@@ -58,17 +62,17 @@ class Application(object):
 class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
 
     client = None
-   
+    no_broadcast=[ '<sinta sarr="ESCENARIO:CLASE_LOCAL" />','<sinta sarr="ESCENARIO:SEMINARIO/CLASE" />','<sinta sarr="ESCENARIO:PELICULA" />','<sinta sarr="MENU:ESCENARIOS" />','<sinta sarr="MENU:PRINCIPAL" />','<sinta sarr="MENU:LLAMARCOLGAR" />','<sinta sarr="MENU:SONIDO" />','<sinta sarr="MENU:LUCES" />','<sinta sarr="MENU:APAGAR" />','<sinta sarr="MENU:INICIO" />','<sinta sarr="DISPOSITIVO:CAMARA_1" />','<sinta sarr="DISPOSITIVO:CAMARA_2" />','<sinta sarr="DISPOSITIVO:CAMARA_3" />','<sinta sarr="DISPOSITIVO:PANTALLA_PRESIDENCIA" />','<sinta sarr="DISPOSITIVO:PANTALLA_ENTRADA" />','<sinta sarr="DISPOSITIVO:PIZARRA_DIGITAL" />','<sinta sarr="DISPOSITIVO:PROYECTOR_CENTRAL" />','<sinta sarr="DISPOSITIVO:PANTALLA_ELECTRICA" />','<sinta sarr="DISPOSITIVO:DVD" />','<sinta sarr="DISPOSITIVO:DVDGRAB" />','<sinta sarr="DISPOSITIVO:ORDENADOR_PRINCIPAL" />','<sinta sarr="DISPOSITIVO:PORTATIL1" />','<sinta sarr="DISPOSITIVO:PORTATIL2" />','<sinta sarr="DISPOSITIVO:PORTATIL3" />','<sinta sarr="DISPOSITIVO:PORTATIL4" />','<sinta sarr="DISPOSITIVO:CAMARA_DE_DOCUMENTOS" />','<sinta sarr="DISPOSITIVO:PLASMA" />','<sinta sarr="DISPOSITIVO:RED_THINK_CLIENT" />','<sinta sarr="SISTEMA:BIENVENIDO" />','<sinta sarr="CAMARA_1:TODAS_POSICIONES" />','<sinta sarr="CAMARA_2:TODAS_POSICIONES" />','<sinta sarr="CAMARA_3:TODAS_POSICIONES" />','<sinta sarr="CAMARA_1:TODAS_POSICIONES:CANCELAR" />','<sinta sarr="CAMARA_2:TODAS_POSICIONES:CANCELAR" />','<sinta sarr="CAMARA_3:TODAS_POSICIONES:CANCELAR" />']
+    
+       
     def on_cmd(self, cmd):
+        
         if not self.client:
             print "Haseratu.....!!!!!!!!!!!!!"
             self.client = client_module.Client('192.168.110.237', 4321)
             print "---1---"
             thread.start_new_thread(self.receive, ())
-            
-        #s=self.client_module.Client('192.168.110.237', 4321)
-        #self.client = client_module.Client('localhost', 4321)
-        
+                  
         print "bidali php zerbitzarita:: "+str(cmd)
         self.client.send(cmd)
                 
@@ -80,13 +84,21 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
             if r:
                 if "\0" in r:
                     for c in r.split("\0"):
-                        print "jaso da php zerbitzaritik::: "+str(c)
-                        self.broadcast_event('result', c.strip() )
+                        self.resp(c.strip())
                 else:
-                    print "jaso da php zerbitzaritik::: "+str(r)
-                    self.broadcast_event('result', r.strip() )
+                    self.resp(r.strip())
     
-           
+    def resp(self,msg):
+        if not msg:
+            return
+        
+        if (msg in self.no_broadcast ):
+            print "*1* jaso da php zerbitzaritik::: "+str(msg)+"NO  broadcast"
+            #self.emit('result', msg)
+        else:
+            print "*2* jaso da php zerbitzaritik::: "+str(msg)+" broadcast"
+            self.broadcast_event('result', msg )
+            
     def on_agindu(self):
         print "agindu........."
 
@@ -94,6 +106,7 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
     def on_recv_disconnect(self):
         print "jaso recv_disconnect"
         self.disconnect(silent=True)
+        #self.client.
 
     def on_user_message(self, msg):
         print "jaso on_user_message" + msg
@@ -105,6 +118,7 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
 
     def on_recv_message(self, message):
         print "jaso recv_message"+str(message)
+
 
 
 
