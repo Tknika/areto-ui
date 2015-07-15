@@ -1,0 +1,119 @@
+.col_flex_none{
+    flex:inherit;
+    width:auto;
+}
+.radio_list_ongi_etorri{
+    width:15%;
+    margin-left:10px;
+}
+.ion_tabs_nagusia{
+    width:50%;
+}
+.ion_content_nagusia{
+    width:50%;
+}
+.ion_tabs_nagusia div.tabs{
+    width:50%;
+}
+.ion-content-dvdgrab{
+    /*width:35%;*/
+    padding-left:5px;
+}
+.col_vertical_align_center{
+    padding-top:50px;
+}
+input.input-text-border{
+    border: solid 1px #707070;
+}
+.col_input_text_label{
+    padding-top:11px;
+}
+.ion-content-custom{
+   padding-left:5px; 
+}
+/*.vert {
+      -moz-orient: vertical;
+      width: 16px;
+      height: 150px;
+}*/
+.col_bolumena_vertical_align_center{
+    padding-top:15px;
+    width:100px;
+}
+.col_soinuen_mailak_doitu_vertical_align_center{
+    padding-top:15px;
+    width:200px;
+}
+.col_argiak_vertical_align_center{
+    padding-top:15px;
+    width:110px;
+}
+#id_div_sistema_osoa_itzali_nahi_baduzu{
+    padding-top:10px;
+}
+.ion-content-itzali{
+    width: 35%;
+}
+.div_espera_erlojua{
+    clear:both;
+}
+.spinner_espera_erlojua{
+    text-align: center;
+    padding-left:95px;
+}
+.button_kamara_eskubira{
+  margin-left:50px;
+}
+.button_dvd_erdian{
+  margin-left:18px;  
+}
+.col_tb_kanal_aukeraketa_vertical_align_center{
+  padding-top:15px;
+  /*width:200px;*/  
+}
+.ion_scroll_contactos,.ion_scroll_anchos_banda{
+    height:300px;
+}
+div#id_div_anchos_banda{
+    padding-left: 10px;
+}
+.row_menu_nagusia{
+    padding:0;
+}
+/**dispositiboen menua ez ikusteko, hauek biak komentatu**/
+div.div_menu_nagusia{
+    width:275px;
+}
+div.col_menu_nagusia{
+    padding:0;
+    height: 500px;
+    padding-right: 20px;
+}
+.ion_list_nagusia_dispositiboa div.list{
+    width:290px;
+}
+.meter_class{
+    width:200px;
+    height:25px;
+    margin-top:10px;
+}
+.is_row{
+    float:left;
+    clear:both;
+}
+.not_is_row{
+    float:left;    
+}
+.ion-content-custom-textarea{
+    padding:5px;
+}
+.ion_item_custom_disabled{
+    background-color:#CCCCCC;
+    display:none;
+}
+.div_show_popup_title{
+    float:left;
+}
+.div_mezuak_controller{
+    display:none;
+}

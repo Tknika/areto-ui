@@ -1,0 +1,53 @@
+<ion-view cache-view="false">
+    <ion-nav-title translate>DOKUMENTU KAMERA</ion-nav-title>
+    <!--
+    <ion-content class="ion-content-custom">
+    -->
+    <ion-content>
+        <div class="row row_menu_nagusia">
+            <div class="col col_flex_none col_menu_nagusia">    
+                <div class="div_menu_nagusia" ng-include src="'templates/menu_nagusia.html'"></div>
+            </div>
+        <div class="col col_flex_none">                                    
+        <div id="id_lenteen_doiketa">
+            <h4 translate>LENTEEN DOIKETA</h4>
+            <div class="row">
+                <div class="col col_flex_none">        
+                    <button class="button" ng-click="dokumentu_kamera_fokua_gehi_click();" translate>FOKUA +</button>                                                           
+                </div>
+                <div class="col col_flex_none">        
+                    <button class="button" ng-click="dokumentu_kamera_zoom_gehi_click();" translate>ZOOM + (HURBILDU)</button>                                                           
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col_flex_none">        
+                    <button class="button" ng-click="dokumentu_kamera_fokua_ken_click();" translate>FOKUA -</button>                                                           
+                </div>
+                <div class="col col_flex_none">        
+                    <button class="button" ng-click="dokumentu_kamera_zoom_ken_click();" translate>ZOOM - (URRUNDU)</button>                                                           
+                </div>
+            </div>
+        </div>
+        <div id="id_dokumentu_kamera_kontrola">
+            <h4 translate>KONTROLA</h4>
+            <div class="row">
+                <div class="col col_flex_none">        
+                    <button id="id_button_nagusia_dokumentu_kamera_piztu" class="button" ng-click="dokumentu_kamera_piztu_click();" translate>PIZTU</button>                                                           
+                </div>
+                <div class="col col_flex_none">        
+                    <button id="id_button_nagusia_dokumentu_kamera_itzali" class="button" ng-click="dokumentu_kamera_itzali_click();" translate>ITZALI</button>                                                           
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col_flex_none">        
+                    <button id="id_button_nagusia_dokumentu_kamera_a3" class="button" ng-click="dokumentu_kamera_a3_tamainua_click();" translate>A3 TAMAINUA</button>                                                           
+                </div>
+                <div class="col col_flex_none">        
+                    <button id="id_button_nagusia_dokumentu_kamera_a4" class="button" ng-click="dokumentu_kamera_a4_tamainua_click();" translate>A4 TAMAINUA</button>                                                           
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>        
+    </ion-content>    
+</ion-view>

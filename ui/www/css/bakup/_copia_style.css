@@ -1,0 +1,206 @@
+.col_flex_none{
+    flex:inherit;
+    width:auto;
+}
+.radio_list_ongi_etorri{
+    width:15%;
+    margin-left:10px;
+}
+.ion_tabs_nagusia{
+    width:50%;
+}
+.ion_content_nagusia{
+    width:50%;
+}
+.ion_tabs_nagusia div.tabs{
+    width:50%;
+}
+.ion-content-dvdgrab{
+    /*width:35%;*/
+    padding-left:5px;
+}
+.col_vertical_align_center{
+    padding-top:50px;
+}
+input.input-text-border{
+    border: solid 1px #707070;
+}
+.col_input_text_label{
+    padding-top:11px;
+}
+.ion-content-custom{
+   padding-left:5px; 
+}
+/*.vert {
+      -moz-orient: vertical;
+      width: 16px;
+      height: 150px;
+}*/
+.col_bolumena_vertical_align_center{
+    padding-top:15px;
+    width:100px;
+}
+.col_soinuen_mailak_doitu_vertical_align_center{
+    padding-top:15px;
+    width:200px;
+}
+.col_argiak_vertical_align_center{
+    padding-top:15px;
+    width:110px;
+}
+#id_div_sistema_osoa_itzali_nahi_baduzu{
+    padding-top:10px;
+}
+.ion-content-itzali{
+    width: 35%;
+}
+.div_espera_erlojua{
+    clear:both;
+}
+.spinner_espera_erlojua{
+    text-align: center;
+    padding-left:95px;
+}
+.button_kamara_eskubira{
+  margin-left:50px;
+}
+.button_dvd_erdian{
+  margin-left:18px;  
+}
+.col_tb_kanal_aukeraketa_vertical_align_center{
+  padding-top:15px;
+  /*width:200px;*/  
+}
+.ion_scroll_contactos,.ion_scroll_anchos_banda{
+    height:300px;
+}
+div#id_div_anchos_banda{
+    padding-left: 10px;
+}
+.row_menu_nagusia{
+    padding:0;
+}
+/**dispositiboen menua ez ikusteko, hauek biak komentatu**/
+div.div_menu_nagusia{
+    width:275px;
+}
+div.col_menu_nagusia{
+    padding:0;
+    height: 500px;
+    padding-right: 20px;
+}
+.ion_list_nagusia_dispositiboa div.list{
+    width:290px;
+}
+.meter_class{
+    width:200px;
+    height:25px;
+    margin-top:10px;
+}
+.is_row{
+    float:left;
+    clear:both;
+}
+.not_is_row{
+    float:left;    
+}
+.bar.bar-assertive {
+    background-color: #c7d51f;
+    border-color: #c7d51f;
+    }
+ .bar.bar-positive {
+     border-color: #000;
+     background-color: #000;
+     color: #fff;
+ }
+ .menu .scroll-content {
+     background-color: #f2f2f2;
+     z-index: 10;
+ }#ion_side_menu_custom .item-complex .item-content,#ion_side_menu_custom_nagusia .item-complex .item-content {
+     /*intelsat-2015*/
+     /*background-color: #f2f2f2 !important;*/
+     background-color: #f2f2f2;
+     }
+ #id_div_telefonoa .button{
+ 	background-color: #000;
+ 	color: white;
+ }
+ #id_button_deitu_eskegi_zenbakia_ezabatu, #id_button_deitu_eskegi_helbide_liburua,#id_button_deitu_eskegi_atzeratu{
+ 	background-color: #f2f2f2 !important;
+ 	color: #000 !important;
+ }
+ #id_button_deitu_eskegi_deitu, #id_button_deitu_eskegi_helbide_liburua_deitu{
+ 	background-color: #c7d51f !important;
+ 	    background-image: url("../img/phone.png");
+ 	    background-position: 4px 12px;
+ 	    background-repeat: no-repeat;
+ 	    color: #000 !important;
+ 	    padding-left: 28px;
+ }
+ #id_button_deitu_eskegi_helbide_liburua{
+ 		    background-image: url("../img/adressbook.png");
+ 		    background-position: 4px 12px;
+ 		    background-repeat: no-repeat;
+ 		    padding-left: 33px;
+ 	
+ }
+#id_button_mic1_aktibatu .active, #id_button_mic2_aktibatu .active, #id_button_mic3_aktibatu .active,  #id_button_mic4_aktibatu .active{
+ 	background-color: #c7d51f;
+ 	color: #000;
+ }
+ /*#id_button_mic1_desaktibatu,#id_button_mic2_desaktibatu,#id_button_mic3_desaktibatu,#id_button_mic4_desaktibatu{
+ 	background-color: #000;
+ 		color: #fff;
+ }*/
+ #id_div_sistema_osoa_itzali_nahi_baduzu .button{
+ 	background-image: url("../img/off.png");
+ 	 background-position: 4px 9px;
+ 	 background-repeat: no-repeat;
+ 	 padding-left: 33px;
+ }
+#id_button_nagusia_grabazioa_grabatu{
+	background-image: url("../img/grabatu.png");
+		 background-position: 4px 9px;
+		 background-repeat: no-repeat;
+		 padding-left: 33px;
+	
+}
+#id_button_nagusia_grabazioa_grabazioa_gelditu{
+	background-image: url("../img/stop.png");
+		 background-position: 4px 9px;
+		 background-repeat: no-repeat;
+		 padding-left: 33px;
+	
+}
+#id_button_nagusia_proiektorea_igo{
+	background-image: url("../img/up.png");
+		 background-position: 4px 9px;
+		 background-repeat: no-repeat;
+		 padding-left: 33px;
+	
+}
+#id_button_nagusia_proiektorea_jaitsi{
+	background-image: url("../img/down.png");
+		 background-position: 4px 9px;
+		 background-repeat: no-repeat;
+		 padding-left: 33px;
+	
+}#id_button_nagusia_proiektorea_piztu, #id_button_nagusia_sarrera_piztu, #id_button_nagusia_feedback_piztu, #id_button_nagusia_arbela_piztu, #id_button_nagusia_plasma_piztu{
+	background-image: url("../img/on.png");
+		 background-position: 4px 9px;
+		 background-repeat: no-repeat;
+		 padding-left: 33px;
+}
+#id_button_nagusia_proiektorea_itzali, #id_button_nagusia_sarrera_itzali, #id_button_nagusia_feedback_itzali, #id_button_nagusia_arbela_itzali, #id_button_nagusia_plasma_itzali{
+	background-image: url("../img/off1.png");
+		 background-position: 4px 9px;
+		 background-repeat: no-repeat;
+		 padding-left: 33px;
+}
+#id_button_nagusia_arbela_muteatu, #id_button_nagusia_proiektorea_muteatu{
+	background-image: url("../img/mute.png");
+		 background-position: 4px 9px;
+		 background-repeat: no-repeat;
+		 padding-left: 33px;
+	
+}

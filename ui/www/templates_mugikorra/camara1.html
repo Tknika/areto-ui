@@ -1,0 +1,76 @@
+<ion-view cache-view="false">
+    <ion-nav-title translate>EZKERREKO IKASLE KAMARA</ion-nav-title>
+    <!--
+    <ion-content class="ion-content-custom">
+    -->
+    <ion-content>
+    <div class="row row_menu_nagusia">
+            <div class="col col_flex_none col_menu_nagusia">    
+                <div class="div_menu_nagusia" ng-include src="'templates_mugikorra/menu_nagusia.html'"></div>
+            </div>
+        <div class="col col_flex_none">                                
+        <div id="id_div_camara1">   
+            <div class="row">
+                <div class="col col_flex_none">        
+                    <div class="row">
+                        <div class="col">
+                            <button class="button" ng-click="nagusia_camara1_zoom_gehi_click();" translate>ZOOM + (HURBILDU)</button>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="button" ng-click="nagusia_camara1_zoom_ken_click();" translate>ZOOM - (URRUNDU)</button>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="button" ng-click="nagusia_camara1_posizio_guztiak_ikusi_click();" translate>POSIZIO GUZTIAK IKUSI</button>
+                        </div>    
+                    </div> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col_flex_none">        
+                    <div class="row row_camara_gora_behera">
+                        <!--
+                        <div class="col">
+                            &nbsp;
+                        </div>
+                        -->
+                        <div class="col">
+                            <button class="button" ng-click="nagusia_camara1_gora_click();" translate>GORA</button>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="col col_flex_none">
+                            <button class="button" ng-click="nagusia_camara1_ezkerrera_click();" translate>EZKERRERA</button>
+                        </div>
+                        <!--
+                        <div class="col">
+                            &nbsp;
+                        </div>
+                        -->
+                        <div class="col col_flex_none">
+                            <!--
+                            <button class="button button_kamara_eskubira" ng-click="nagusia_camara1_eskubira_click();" translate>ESKUBIRA</button>
+                            -->
+                            <button class="button" ng-click="nagusia_camara1_eskubira_click();" translate>ESKUBIRA</button>
+                        </div>
+                    </div>
+                    <div class="row row_camara_gora_behera">
+                        <!--
+                        <div class="col">
+                            &nbsp;
+                        </div>
+                        -->
+                        <div class="col">
+                            <button class="button"  ng-click="nagusia_camara1_behera_click();" translate>BEHERA</button>
+                        </div>    
+                    </div>
+                </div>
+             </div>    
+        </div>
+        </div>
+    </div>    
+    </ion-content>    
+</ion-view>

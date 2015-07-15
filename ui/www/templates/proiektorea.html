@@ -1,0 +1,94 @@
+<ion-view cache-view="false">
+    <ion-nav-title translate>PROIEKTOREA</ion-nav-title>
+    <!--
+    <ion-content class="ion-content-custom">
+    -->
+    <ion-content>
+        <div class="row row_menu_nagusia">
+            <div class="col col_flex_none col_menu_nagusia">    
+                <div class="div_menu_nagusia" ng-include src="'templates/menu_nagusia.html'"></div>
+            </div>
+        <div class="col col_flex_none">
+        <div id="id_div_proiektorea_pantaila_igo_jaitsi">   
+          <h4 translate>PANTAILA IGO/JAITSI</h4>
+            <div class="row">        
+                <div class="col col-50">
+                    <button id="id_button_nagusia_proiektorea_igo" class="button button-block" ng-click="nagusia_proiektorea_igo_click();" translate>IGO</button>
+                </div>
+                <div class="col col-50">
+                  <button id="id_button_nagusia_proiektorea_jaitsi" class="button button-block" ng-click="nagusia_proiektorea_jaitsi_click();" translate>JAITSI</button>
+                </div>                
+            </div>
+        </div>
+        <div id="id_div_proiektorea_pantaila_piztu_itzali">   
+          <h4 translate>PIZTU ITZALI PROIEKTORE ZENTRALA</h4>
+            <div class="row" style="display:none;">        
+                <div class="col col-50">
+                    <button id="id_button_nagusia_proiektorea_piztu" class="button button-block" ng-click="nagusia_proiektorea_piztu_click();" translate>PIZTU</button>
+                </div>
+                <div class="col col-50">
+                  <button id="id_button_nagusia_proiektorea_itzali" class="button button-block" ng-click="nagusia_proiektorea_itzali_click();" translate>ITZALI</button>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col col_flex_none">
+                    <ion-toggle toggle-class="toggle-calm" ng-model=proiektorea_piztu ng-disabled=proiektorea_piztu_disabled ng-change="proiektorea_piztu_toggle_change()">&nbsp;</ion-toggle>
+                </div>
+                <div class="col col_flex_none col_plasma_egoera">
+                    <input id="id_proiektorea_piztu_text" type="text" class="input-text-border" value="{{proiektorea_piztu_text}}" size="50" readonly="readonly"/>
+                </div>
+            </div> 
+            <div class="row">        
+                <div class="col col-50">
+                    <button id="id_button_nagusia_proiektorea_muteatu" class="button button-block" ng-click="nagusia_proiektorea_muteatu_click();" translate>MUTEATU</button>
+                </div>
+                <div class="col col-50">
+                  <button id="id_button_nagusia_proiektorea_desmuteatu" class="button button-block" ng-click="nagusia_proiektorea_desmuteatu_click();" translate>DESMUTEATU</button>
+                </div>                
+            </div>
+        </div>
+        <div id="id_div_proiektorea_aukeratu">   
+          <h4 translate>AUKERATU</h4>
+            <div class="row">
+                <div class="col col_flex_none">
+                  <button id="id_button_nagusia_proiektorea_dvd" class="button" ng-click="nagusia_proiektorea_dvd_click();" translate>DVD</button>
+                </div>
+                <!--
+                <div class="col col_flex_none">
+                  <button id="id_button_nagusia_proiektorea_dvdgrab" class="button" ng-click="nagusia_proiektorea_dvdgrab_click();" translate>DVDGRAB</button>
+                </div>
+                -->
+                <div class="col col_flex_none">
+                  <button id="id_button_nagusia_proiektorea_camara_de_documentos" class="button" ng-click="nagusia_proiektorea_dokumentu_kamera_click();" translate>DOKUMENTU KAMERA</button>
+                </div>
+            </div>
+            
+            <div class="row">        
+                <div class="col col-33">
+                    <button id="id_button_nagusia_proiektorea_portatil1" class="button button-block" ng-click="nagusia_proiektorea_portatil1_click();"><translate>PORTATIL</translate>1</button>
+                </div>
+                <div class="col col-33">
+                  <button id="id_button_nagusia_proiektorea_portatil2" class="button button-block" ng-click="nagusia_proiektorea_portatil2_click();"><translate>PORTATIL</translate>2</button>
+                </div>
+                <div class="col col-33">
+                  <button id="id_button_nagusia_proiektorea_portatil3" class="button button-block" ng-click="nagusia_proiektorea_portatil3_click();"><translate>PORTATIL</translate>3</button>
+                </div>
+            </div>
+            <div class="row">
+                <!--
+                <div class="col col-50">
+                  <button id="id_button_nagusia_proiektorea_think_client" class="button button-block" ng-click="nagusia_proiektorea_think_client_click();" translate>THINK CLIENT</button>
+                </div>
+                -->
+                <div class="col col-50">
+                  <button id="id_button_nagusia_proiektorea_pcsuelo" class="button button-block" ng-click="nagusia_proiektorea_pclurra_click();" translate>PCLURRA</button>
+                </div>
+                <div class="col col-50">
+                  <button id="id_button_nagusia_proiektorea_atril" class="button button-block" ng-click="nagusia_proiektorea_atril_click();" translate>ATRIL</button>
+                </div>               
+            </div>
+        </div>
+        </div>
+    </div>          
+    </ion-content>    
+</ion-view>

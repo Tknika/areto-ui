@@ -1,0 +1,551 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: my_menuside\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Kam <bulegoa@netkam.com>\n"
+"Language-Team: KAM\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+
+#: www/templates/hasiera.html:23
+msgid "BILERA"
+msgstr "REUNIÓN"
+
+msgid "ONGI ETORRI TKNIKA-ko SINTA-ra" 
+msgstr "BIENVENIDO A SINTA DE TKNIKA"
+
+msgid "ERABILTZAILEA" 
+msgstr "USUARIO"
+
+msgid "PASAHITZA" 
+msgstr "CLAVE"
+
+msgid "SISTEMA ERABILI NAHI BADUZU SAKATU HEMEN" 
+msgstr "SI QUIERE USAR EL SISTEMA PRESIONE AQUÍ"
+
+msgid "HIZKUNTZA AUKERATU" 
+msgstr "SELECCIONE EL LENGUAJE"
+
+msgid "HASIERA" 
+msgstr "INICIO"
+
+msgid "NAGUSIA" 
+msgstr "PRINCIPAL"
+
+msgid "DEITU/ESKEGI" 
+msgstr "LLAMAR/COLGAR"
+
+msgid "SOINUA" 
+msgstr "SONIDO"
+
+msgid "ARGIAK" 
+msgstr "LUCES"
+
+msgid "ITZALI" 
+msgstr "APAGAR"
+
+msgid "ZER EGIN NAHI DUZU?" 
+msgstr "¿QUÉ QUIERE HACER?"
+
+msgid "KLASEAK BIDALI" 
+msgstr "ENVIAR CLASES"
+
+msgid "KLASEAK JASO" 
+msgstr "RECIBIR CLASES"
+
+msgid "HITZALDIA" 
+msgstr "CLASE LOCAL"
+
+msgid "BILERA" 
+msgstr "REUNIÓN"
+
+msgid "FILMA" 
+msgstr "PELÍCULA"
+
+msgid "ERAGILEA" 
+msgstr "OPERADOR"
+
+msgid "Bideokonferentzia bat egiteko" 
+msgstr "Para hacer una videoconferencia"
+
+msgid "Bideokonferentziz urrutiko klase bat jasotzeko" 
+msgstr "Para recibir una clase exterior por videoconferencia"
+
+msgid "Klase bat emateko, proiektoreak eta plasma pizten dira" 
+msgstr "Para dar una clase, se encienden el proyector y el plasma"
+
+msgid "Klase bat emateko inolako dispositiborik piztu gabe,hau da, proiektoreak eta plasma ez dira pizten" 
+msgstr "Para dar una clase sin encender ningún dispositivo, esto es, no se encienden el proyector y el plasma"
+
+msgid "Pantaila nagusian dvd bat proiektatzeko" 
+msgstr "Para proyectar un dvd en la pantalla principal"
+
+msgid "LEHENENGO PAUSUA" 
+msgstr "PRIMER PASO"
+
+msgid "AUKERATU HELBIDE LIBURUTIK ETA DEITU" 
+msgstr "ELIJA Y LLAME DESDE LIBRO DE DIRECCIONES"
+
+msgid "EDO" 
+msgstr "O BIEN PASO"
+
+msgid "BANDA ZABALERA AUKERATU" 
+msgstr "ELIJA ANCHO DE BANDA"
+
+msgid "ETA HIRUGARREN PAUSUA" 
+msgstr "Y PASO 3"
+
+msgid "MARKATU ZENBAKI BERRIA HEMEN" 
+msgstr "MARQUE NUEVO NUMERO AQUÍ"
+
+msgid "EZ MOLESTATU" 
+msgstr "NO INTERRUMPIR" 
+
+msgid "BOL SOLASKIDEA" 
+msgstr "VOL CONTRAPARTE"
+
+msgid "GURE SOINUA" 
+msgstr "NUESTRO SONIDO"
+
+msgid "1. deia" 
+msgstr "1a_llamada"
+
+msgid "2. deia" 
+msgstr "2a_llamada"
+
+msgid "3. deia" 
+msgstr "3a_llamada"
+
+msgid "4. deia" 
+msgstr "4a_llamada"
+
+msgid "AKTIBATU" 
+msgstr "ACTIVAR"
+
+msgid "BIDALI" 
+msgstr "ENVIAR"
+
+msgid "HELBIDE LIBURUA" 
+msgstr "LIBRO DE DIRECCIONES"
+
+msgid "BANDA ZABALERA ALDATU" 
+msgstr "CAMBIAR ANCHO DE BANDA"
+
+msgid "ZENBAKIA EZABATU" 
+msgstr "BORRAR NUMERO"
+
+msgid "ATZERATU" 
+msgstr "RETROCEDER"
+
+msgid "IP" 
+msgstr "IP"
+
+msgid "RDSI" 
+msgstr "RDSI"
+
+msgid "DEITU" 
+msgstr "LLAMAR"
+
+msgid "SOLASKIDEA ERAKUTSI" 
+msgstr "MOSTRAR CONTRAPARTE"
+
+msgid "ESKEGI" 
+msgstr "COLGAR"
+
+msgid "ONETSI" 
+msgstr "ACEPTAR"
+
+msgid "EZEZTATU" 
+msgstr "CANCELAR"
+
+msgid "MIKROFONOAK AKTIBATU ETA DOITU" 
+msgstr "ACTIVAR Y AJUSTAR MICRÓFONOS"
+
+msgid "SOINUEN MAILAK DOITU" 
+msgstr "AJUSTAR NIVEL DE SONIDOS"
+
+msgid "DATORREN SOINUA" 
+msgstr "SONIDO ENTRANTE"
+
+msgid "BOLUMENA" 
+msgstr "VOLUMEN"
+
+msgid "BIDALTZEN DEN SOINUA" 
+msgstr "SONIDO QUE SE ENVÍA"
+
+msgid "SOINU OROKORRA" 
+msgstr "SONIDO GENERAL"
+
+msgid "DESAKTIBATU" 
+msgstr "DESACTIVAR"
+
+msgid "ISILARAZI" 
+msgstr "SILENCIAR"
+
+msgid "mikr1" 
+msgstr "micr1"
+
+msgid "mikr2" 
+msgstr "micr2"
+
+msgid "mikr3" 
+msgstr "micr3"
+
+msgid "mikr4" 
+msgstr "micr4"
+
+msgid "mikr atril" 
+msgstr "micr atril"
+
+msgid "mikr atril2" 
+msgstr "micr atril2"
+
+msgid "SABAIKO ARGIAK" 
+msgstr "LUCES DEL TECHO"
+
+msgid "LURREKO ARGIAK" 
+msgstr "LUCES DEL SUELO"
+
+msgid "PIZTU" 
+msgstr "ENCENDER"
+
+msgid "LEHEND" 
+msgstr "PRESIDENCIA"
+
+msgid "PASABIDE" 
+msgstr "PASILLO"
+
+msgid "IKASLEAK" 
+msgstr "ALUMNOS"
+
+msgid "PIZTU SABAIA" 
+msgstr "ENCENDER TECHO"
+
+msgid "ITZALI SABAIA" 
+msgstr "APAGAR TECHO"
+
+msgid "PIZTU LURRA" 
+msgstr "ENCENDER SUELO"
+
+msgid "ITZALI LURRA" 
+msgstr "APAGAR SUELO"
+
+msgid "MAXIMOA LURRA" 
+msgstr "MÁXIMO SUELO"
+
+msgid "ERDIA LURRA" 
+msgstr "MEDIO SUELO"
+
+msgid "MINIMOA LURRA" 
+msgstr "MÍNIMO SUELO"
+
+msgid "ARGI GUZTIAK" 
+msgstr "TODAS LUCES"
+
+msgid "ITZALI DENA" 
+msgstr "APAGAR TODO"
+
+msgid "RSTEP" 
+msgstr "RSTEP"
+
+msgid "FSTEP" 
+msgstr "FSTEP"
+
+msgid "MENUA PANTAILAN" 
+msgstr "MENÚ EN PANTALLA"
+
+msgid "ON" 
+msgstr "ON"
+
+msgid "OFF" 
+msgstr "OFF"
+
+msgid "PIZTU ITZALI PROIEKTORE ZENTRALA" 
+msgstr "ENCENDER APAGAR PROYECTOR CENTRAL"
+
+msgid "MUTEATU" 
+msgstr "MUTEAR"
+
+msgid "DESMUTEATU" 
+msgstr "DESMUTEAR"
+
+msgid "PCLURRA" 
+msgstr "PCSUELO"
+
+msgid "PORTATIL" 
+msgstr "PORTATIL"
+
+msgid "THINK CLIENT" 
+msgstr "THINK CLIENT"
+
+msgid "DOKUMENTU KAMERA" 
+msgstr "CÁMARA DE DOCUMENTOS"
+
+msgid "DVD" 
+msgstr "DVD"
+
+msgid "EZKERREKO IKASLE KAMARA" 
+msgstr "CÁMARA ALUMNOS IZQUIERDA"
+
+msgid "ESKUINEKO IKASLE KAMARA" 
+msgstr "CÁMARA ALUMNOS DERECHA"
+
+msgid "PRESIDENTZI KAMERA" 
+msgstr "CÁMARA PRESIDENCIA"
+
+msgid "ERABILI EDO ALDATU NAHI DUZUN OBJEKTUA SAKATU" 
+msgstr "PRESIONE EL OBJETO QUE QUIERA USAR O CAMBIAR"
+
+msgid "PROIEKTORE ZENTRALA" 
+msgstr "PROYECTOR CENTRAL"
+
+msgid "ZOOM + (HURBILDU)" 
+msgstr "ZOOM + (ACERCAR)"
+
+msgid "ZOOM - (URRUNDU)" 
+msgstr "ZOOM - (ALEJAR)"
+
+msgid "TV" 
+msgstr "TV"
+
+msgid "DVDGRAB" 
+msgstr "DVDGRAB"
+
+msgid "POSIZIO FINKOAK" 
+msgstr "POSICIONES FIJAS"
+
+msgid "POSIZIO GUZTIAK IKUSI" 
+msgstr "VER TODAS LAS POSICIONES"
+
+msgid "DELEGATU IMAJINA (BAI/EZ)" 
+msgstr "IMAGEN DELEGADO (SI/NO)"
+
+msgid "ANGELU ZABALEKO POSIZIOA" 
+msgstr "POSICIÓN ANGULO ANCHO"
+
+msgid "1 POSIZIO FINKOA" 
+msgstr "POSICIÓN PREFIJADA 1"
+
+msgid "2 POSIZIO FINKOA" 
+msgstr "POSICIÓN PREFIJADA 2"
+
+msgid "POSIZIOA GORDE" 
+msgstr "ALMACENAR POSICIÓN"
+
+msgid "ALDERANTZIZ JARRI IMAJIN NAHASKETA" 
+msgstr "INVERTIR MEZCLA IMAGENES"
+
+msgid "HONDOKO ARGIAK" 
+msgstr "ILUMINACIÓN DE FONDO"
+
+msgid "SOURCE" 
+msgstr "SOURCE"
+
+msgid "GRABATU" 
+msgstr "GRABAR"
+
+msgid "GRABAZIOA GELDITU" 
+msgstr "PARAR GRABACIÓN"
+
+msgid "EGOERA" 
+msgstr "ESTADO"
+
+msgid "TB KANAL AUKERAKETA" 
+msgstr "TV SELECCIÓN CANAL"
+
+msgid "GRABAZIOA GELDITUA" 
+msgstr "GRABACIÓN PARADA"
+
+msgid "GRABATZEN" 
+msgstr "GRABANDO"
+
+msgid "SARRERAKO PANTAILA" 
+msgstr "PANTALLA ENTRADA"
+
+msgid "PANTAILA PIZTU/ITZALI" 
+msgstr "ENCENDER/APAGAR PANTALLA"
+
+msgid "PRESIDENTZIA PANTAILA" 
+msgstr "PANTALLA PRESIDENCIA"
+
+msgid "FEEDBACK" 
+msgstr "FEEDBACK"
+
+msgid "ERAKUSTEKO IMAJINA" 
+msgstr "IMAGEN A MOSTRAR"
+
+msgid "GURE IMAJINA ERAKUTSI" 
+msgstr "NUESTRA IMAGEN"
+
+msgid "SOLASKIDE ETA GURE IMAJINA" 
+msgstr "CONTRAPARTE Y NUESTRA IMAGEN"
+
+msgid "DOKUMENTU KAMERA" 
+msgstr "CÁMARA DE DOCUMENTOS"
+
+msgid "KONTROLA" 
+msgstr "CONTROL"
+
+msgid "LENTEEN DOIKETA" 
+msgstr "AJUSTE DE LENTES"
+
+msgid "FOKUA +" 
+msgstr "FOCO +"
+
+msgid "FOKUA -" 
+msgstr "FOCO -"
+
+msgid "A3 TAMAINUA" 
+msgstr "TAMAÑO A3"
+
+msgid "A4 TAMAINUA" 
+msgstr "TAMAÑO A4"
+
+msgid "THINK CLIENT SAREA" 
+msgstr "RED THINK CLIENT"
+
+msgid "PLASMA" 
+msgstr "PLASMA"
+
+msgid "PROEIKTOREA" 
+msgstr "PROYECTOR"
+
+msgid "IGO" 
+msgstr "SUBIR"
+
+msgid "JAITSI" 
+msgstr "BAJAR"
+
+msgid "PANTAILA IGO/JAITSI" 
+msgstr "SUBIR/BAJAR PANTALLA"
+
+msgid "ARBELA DIGITALA" 
+msgstr "PIZARRA DIGITAL"
+
+msgid "ARBELA" 
+msgstr "PIZARRA"
+
+msgid "ARBELA PIZTU/ITZALI" 
+msgstr "ENCENDER/APAGAR PIZARRA"
+
+msgid "POSIZIOAK" 
+msgstr "POSICIONES"
+
+msgid "SARRERA" 
+msgstr "ENTRADA"
+
+msgid "ZENTRALA" 
+msgstr "CENTRAL"
+
+msgid "PROEIKTOREA" 
+msgstr "PROYECTOR"
+
+msgid "Itxaron momentu bat mesedez, sistema hasieratu arte" 
+msgstr "Espere un momento por favor, hasta que el sistema se encienda"
+
+msgid "Itxaron momentu bat mesedez, sistema itzaltzen ari da" 
+msgstr "El sistema se esta apagando, espere por favor"
+
+msgid "Itxaron momentu bat mesedez, eskaria prozesatzen ari da" 
+msgstr "Procesando petición, espere"
+
+msgid "SISTEMA OSOA ITZALI NAHI BADUZU, ITZALI BOTOIA SAKATU BEHAR DUZU" 
+msgstr "SI QUIERE APAGAR COMPLETAMENTE EL SISTEMA PRESIONE EL BOTÓN APAGAR"
+
+msgid "GOGORA EZAZU SISTEMA GUZTIA BERRASIERATZEKO 5 BAT MINUTU ITXARON BEHAR DITUZULA, HAU HORRELA DA PROIEKTOREAK DENDORA BAT BEHAR DUELAKO HOZTEKO" 
+
+msgstr "RECUERDE QUE PARA RECOMENZAR TODO EL SISTEMA DEBE ESPERAR ALREDEDOR DE 5 MINUTOS ESTO SE DEBE A QUE EL PROYECTOR NECESITA UN TIEMPO PARA ENFRIARSE"
+
+msgid "DEIA ESEKI NAHI BADUZU, DEITU/ESKEGI ORRIRA JOAN BEHAR DUZU" 
+msgstr "SI SOLO QUIERE COLGAR LA LLAMADA VAYA A LA PÁGINA LLAMAR/COLGAR"
+
+msgid "ELIKADURA-ITURRIAREN KONTROLA" 
+msgstr "CONTROL ALIMENTACIÓN ELÉCTRICA"
+
+msgid "ikus mikr atril" 
+msgstr "ver micros atril"
+
+msgid "ikus mikr arruntak" 
+msgstr "ver micros normales"
+
+msgid "Proiektorea itzaltzen baduzu 5 minutu itxaron beharko duzu berriro piztu ahal izateko lanpara hozten den bitartean. Proiektorea itzali nahi duzu?" 
+msgstr "Si apagas el proyector tendrás que esperar 5 minutos hasta que se enfríe la lampara, para encenderla otra vez.¿Quieres apagar el proyector?"
+
+msgid "PIZTU ITZALI PLASMA" 
+msgstr "ENCENDER APAGAR PLASMA"
+
+msgid "AKTIBO DAUDEN DEIAK" 
+msgstr "LLAMADAS ACTIVAS"
+
+msgid "grabazioa" 
+msgstr "grabación"
+
+msgid "STREAMING GRABAZIOA" 
+msgstr "GRABACIÓN STREAMING"
+
+msgid "GRAFIKOAK" 
+msgstr "GRÁFICOS"
+
+msgid "AKTIBATUA" 
+msgstr "ACTIVADO"
+
+msgid "ITZALIA" 
+msgstr "APAGADO"
+
+msgid "FROGATU" 
+msgstr "COMPROBAR"
+
+msgid "Ongi Etorri"
+msgstr "Bienvenido"
+
+msgid "Hasiera"
+msgstr "Inicio"
+
+msgid "Nagusia"
+msgstr "Principal"
+
+msgid "AUKERATU"
+msgstr "SELECCIONAR"
+
+msgid "PROIEKTOREA" 
+msgstr "PROYECTOR"
+
+msgid "Deitu/Eskegi" 
+msgstr "Llamar/Colgar"
+
+msgid "Soinua" 
+msgstr "Sonido"
+
+msgid "Argiak" 
+msgstr "Luces"
+
+msgid "Itzali" 
+msgstr "Apagar"
+
+msgid "Proiektorea" 
+msgstr "Proyector"
+
+msgid "SISTEMAN SARTU" 
+msgstr "INICIAR SISTEMA"
+
+msgid "Sarrera" 
+msgstr "Entrada"
+
+msgid "Arbela" 
+msgstr "Pizarra"
+
+msgid "PIZTUTA" 
+msgstr "ENCENDIDO"
+
+msgid "ITZALITA" 
+msgstr "APAGADO"
+
+msgid "ERAGOTZITA" 
+msgstr "DESACTIVADO"

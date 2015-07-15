@@ -1,0 +1,109 @@
+<ion-view cache-view="false">
+    <ion-nav-title translate>GRABAZIOA</ion-nav-title>
+        <!--
+        <ion-content class="ion-content-dvdgrab">
+        -->
+        <ion-content>
+       <!-- <div class="row row_menu_nagusia">
+            <div class="col col_flex_none col_menu_nagusia">    
+                <div class="div_menu_nagusia" ng-include src="'templates_mugikorra/menu_nagusia.html'"></div>
+            </div>-->
+        <div class="col col_flex_none">                        
+        <div id="id_div_dvdgrab"> 
+          <h4 translate>DVDGRAB</h4>
+          <!--
+          <div class="item range">
+            <i class="icon ion-volume-low"></i>
+            <input type="range" name="volume" min="0" max="100" ng-model="rangeValue" ng-change="drag(rangeValue)">
+            <i class="icon ion-volume-high"></i>
+          </div>
+          -->
+                <!--
+                <div class="col col_flex_none col_vertical_align_center">
+                    <label translate>TB KANAL AUKERAKETA</label>
+                </div>
+                -->
+                    <div class="row">
+                        <div class="col col_flex_none col_tb_kanal_aukeraketa_vertical_align_center">
+                            <label class="litletitle"><translate>BOLUMENA</translate></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col_flex_none minus">
+                            <button class="button" ng-click="grabazioa_bolumena_ken_click($event)">-</button>
+                        </div>
+                        <div class="col col_flex_none">
+                            <!--
+                            <progress class="vert" max="100" value="{{grabazioa_bolumena_value}}"></progress>
+                            -->
+                            <meter class="meter_class" max="100" value="{{grabazioa_bolumena_value}}"></meter>
+                        </div>                                                                        
+                        <div class="col col_flex_none">
+                            <button class="button" ng-click="grabazioa_bolumena_gehi_click($event)">+</button>
+                        </div>                       
+                    </div>
+                <div class="row">
+                        <div class="col col_flex_none col_tb_kanal_aukeraketa_vertical_align_center">
+                            <label translate class="litletitle"><translate>TB KANAL AUKERAKETA</translate></label>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col col_flex_none minus">
+                            <button class="button" ng-click="tb_kanal_ken_click($event)">-</button>
+                        </div>
+                        <div class="col col_flex_none">
+                            <button class="button" ng-click="tb_kanal_gehi_click($event)">+</button>
+                        </div> 
+                </div>                
+        
+        <div class="row">        
+            <div class="col col-50">
+              <button id="id_button_nagusia_grabazioa_source" class="button button-block" ng-click="source_click($event);" translate>SOURCE</button>
+            </div>
+            <div class="col col-50">
+              <button id="id_button_nagusia_grabazioa_grabatu" class="button button-block" ng-click="grabatu_click($event);" translate>GRABATU</button>
+            </div>
+        </div>
+        <div class="row">        
+            <div class="col col_flex_none">
+              <button id="id_button_nagusia_grabazioa_grabazioa_gelditu" class="button button-block" ng-click="grabazioa_gelditu_click($event);" translate>GRABAZIOA GELDITU</button>
+            </div>
+        </div>
+        <div class="row">        
+            <div class="col col_flex_none col_input_text_label egoera">
+                <label class="litletitle"><translate>EGOERA</translate>:</label>
+            </div>
+        </div>
+        <div class="row">        
+            <div class="col col_flex_none">
+              <input type="text" class="input-text-border" value="{{nagusia_grabazioa_dvdgrab_egoera}}"/>
+            </div>
+        </div>
+        </div>
+        <div id="id_div_streaming">   
+          <h4 translate>STREAMING</h4>
+            <div class="row">        
+                <div class="col col_flex_none">
+                  <button id="id_button_nagusia_grabazioa_streaming_grabatu" class="button button-block" ng-click="streaming_grabatu_click($event);" translate>GRABATU</button>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col col_flex_none">
+                  <button id="id_button_nagusia_grabazioa_streaming_grabazioa_gelditu" class="button button-block" ng-click="streaming_grabazioa_gelditu_click($event);" translate>GRABAZIOA GELDITU</button>
+                </div>                
+            </div>
+            <div class="row">        
+            <div class="col col_flex_none col_input_text_label egoera">
+                <label class="litletitle"><translate>EGOERA</translate>:</label>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col col_flex_none">
+              <input type="text" class="input-text-border" value="{{nagusia_grabazioa_dvdgrab_streaming_egoera}}"/>
+            </div>
+        </div>
+        </div>
+        </div>    
+        </div>
+        </ion-content>  
+      </ion-view>

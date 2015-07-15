@@ -1,0 +1,18 @@
+<ion-view cache-view="false">    
+    <ion-nav-title translate>POSIZIOAK</ion-nav-title>
+        <ion-content>
+            <div class="row row_menu_nagusia">
+                <div class="col col_flex_none col_menu_nagusia">    
+                    <div class="div_menu_nagusia" ng-include src="'templates_mugikorra/menu_nagusia.html'"></div>
+                </div>
+                <div class="col col_flex_none">
+                    <div class="col col_flex_none {{item.klass}}" ng-repeat="item in kamara_posizioak_posizioak_array">
+                        <button class="button" ng-click="nagusia_kamara_posizioak_posizioa_click(item)">{{item.title}}</button>                        
+                    </div>                       
+                    <div class="row">
+                        <button class="button" ng-click="nagusia_kamara_posizioak_ezeztatu_click()">EZEZTATU</button>
+                    </div>                    
+                </div>
+            </div>    
+        </ion-content>
+</ion-view>    

@@ -1,0 +1,106 @@
+<ion-view cache-view="false">
+    <ion-nav-title translate>ORDENADORE NAGUSIA</ion-nav-title>
+    <!--
+    <ion-content class="ion-content-custom">
+    -->
+    <ion-content>
+        <div class="row row_menu_nagusia">
+            <div class="col col_flex_none col_menu_nagusia">    
+                <div class="div_menu_nagusia" ng-include src="'templates_mugikorra/menu_nagusia.html'"></div>
+            </div>
+        <div class="col col_flex_none">                        
+        
+        <div id="id_control_camara_principal">
+            <h4 translate>KAMARA NAGUSIAREN KONTROLA</h4>
+            <div class="row">
+                <div class="col col_flex_none">        
+                    <div class="row">
+                        <div class="col">
+                            <button class="button" ng-click="nagusia_ordenadore_nagusia_zoom_gehi_click();" translate>ZOOM + (HURBILDU)</button>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="button" ng-click="nagusia_ordenadore_nagusia_zoom_ken_click();" translate>ZOOM - (URRUNDU)</button>
+                        </div>    
+                    </div>                    
+                </div>
+            </div>    
+            <div class="row">    
+                <div class="col col_flex_none">        
+                    <div class="row row_camara_gora_behera">
+                        <!--
+                        <div class="col">
+                            &nbsp;
+                        </div>
+                        -->
+                        <div class="col">
+                            <button class="button" ng-click="nagusia_ordenadore_nagusia_gora_click();" translate>GORA</button>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="button" ng-click="nagusia_ordenadore_nagusia_ezkerrera_click();" translate>EZKERRERA</button>
+                        </div>
+                        <!--
+                        <div class="col">
+                            &nbsp;
+                        </div>
+                        -->
+                        <div class="col">
+                            <!--
+                            <button class="button button_kamara_eskubira" ng-click="nagusia_ordenadore_nagusia_eskubira_click();" translate>ESKUBIRA</button>
+                            -->
+                            <button class="button" ng-click="nagusia_ordenadore_nagusia_eskubira_click();" translate>ESKUBIRA</button>
+                        </div>
+                    </div>
+                    <div class="row row_camara_gora_behera">
+                        <!--
+                        <div class="col">
+                            &nbsp;
+                        </div>
+                        -->
+                        <div class="col">
+                            <button class="button"  ng-click="nagusia_ordenadore_nagusia_behera_click();" translate>BEHERA</button>
+                        </div>    
+                    </div>
+                </div>                
+             </div>
+             <div class="row">
+                        <div class="col col_flex_none">    
+                            <button class="button" ng-click="nagusia_ordenadore_nagusia_angelu_zabalaren_posizioa_click();" translate>ANGELU ZABALAREN POSIZIOA</button>
+                        </div>
+             </div>    
+             <div class="row">    
+                        <div class="col col_flex_none">    
+                            <button class="button" ng-click="nagusia_ordenadore_nagusia_lehenetsitako_posizioa1_click();"><translate>LEHENETSITAKO POSIZIOA</translate> 1</button>
+                        </div>
+             </div>    
+             <div class="row">    
+                        <div class="col col_flex_none">    
+                            <button class="button" ng-click="nagusia_ordenadore_nagusia_lehenetsitako_posizioa2_click();"><translate>LEHENETSITAKO POSIZIOA</translate> 2</button>
+                        </div>                                
+             </div>    
+        </div>
+        <div id="id_ajustar_imagen_ordenador">
+            <h4 translate>ORDENADOREKO IMAJINA DOITU</h4>
+            <div class="row">
+                        <div class="col col_flex_none">    
+                            <button class="button" ng-click="nagusia_ordenadore_nagusia_imajina_handitu_txikitu_click();" translate>IMAJINA HANDITU/TXIKITU</button>
+                        </div>
+            </div>    
+            <div class="row">    
+                        <div class="col col_flex_none">    
+                            <button class="button" ng-click="nagusia_ordenadore_nagusia_imajina_zentratu_click();">IMAJINA ZENTRATU</button>
+                        </div>
+            </div>    
+            <div class="row">     
+                        <div class="col col_flex_none">    
+                            <button class="button" ng-click="nagusia_ordenadore_nagusia_ordenadore_kamara_nahastu_bai_ez_click();">ORDENADORE/KAMARA NAHASTU (BAI/EZ)</button>
+                        </div>                                
+             </div>   
+        </div>
+        </div>
+    </div>        
+    </ion-content>    
+</ion-view>

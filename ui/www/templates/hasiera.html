@@ -1,0 +1,49 @@
+<ion-view cache-view="false">
+    <ion-nav-title translate>ESZENARIOAK</ion-nav-title>
+  
+    <ion-content class="ion-content-custom">
+        <div id="id_div_hasiera">
+        <h4 translate>Zer egin nahi duzu?</h4>
+        
+        
+      
+    
+    
+      
+   
+
+            
+
+<div class="row">
+  <div class="col">
+      <!--
+      <button id="id_button_hasiera_hitzaldia" class="button" ng-click="hitzaldia_click();"><translate>HITZALDIA</translate></button>
+      -->
+      <button id="id_button_hasiera_hitzaldia" class="button" ng-click="hitzaldia_click($event);" ng-mouseup="hitzaldia_mouseup($event);"><translate>HITZALDIA</translate></button>
+  </div>
+</div>
+<div class="row">        
+  <div class="col">
+    <button id="id_button_hasiera_bilera" class="button" ng-click="bilera_click($event);" ng-mouseup="bilera_mouseup($event);" translate>BILERA</button>    
+  </div>
+</div>
+<div class="row">        
+  <div class="col">
+    <button id="id_button_hasiera_filma" class="button" ng-click="filma_click($event);" ng-mouseup="filma_mouseup($event)" translate>FILMA</button>
+  </div>
+</div>
+<div class="row row_klaseak_bidali_jaso">        
+  <div class="col col_flex_none">
+    <button id="id_button_hasiera_klaseak_bidali" class="button" ng-click="klaseak_bidali_click($event);" ng-mouseup="klaseak_bidali_mouseup($event)" translate>KLASEAK BIDALI</button>
+  </div>
+  <div class="col col_flex_none">
+    <button id="id_button_hasiera_klaseak_jaso" class="button" ng-click="klaseak_jaso_click($event);" ng-mouseup="klaseak_jaso_mouseup($event)" translate>KLASEAK JASO</button>
+  </div>  
+</div>           
+
+
+        </div>            
+    </ion-content>    
+    
+       
+</ion-view>

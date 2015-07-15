@@ -1,0 +1,31 @@
+<ion-view cache-view="false">
+    <ion-nav-title translate>ONGI ETORRI TKNIKA-ko SINTA-ra</ion-nav-title>
+    <!--
+    <ion-content class="ion_content_ongi_etorri">
+    -->
+    <ion-content>
+        <div class="list radio_list_ongi_etorri">
+            <h4>{{ongi_etorri_hizkuntza_aukeratu}}</h4>
+            <ion-radio ng-repeat="item in hizkuntzak" ng-value="item.value" 
+                       ng-model="data.hizkuntza" ng-change="hizkuntza_change(item);" ng-click="hizkuntza_click(item)" ng-mouseup="hizkuntza_mouseup(item)" style="width:370px;"> {{ item.text }}
+            </ion-radio>
+        </div>
+        <div class="row">        
+          
+            <div class="col col_flex_none">
+              <!--  
+              <button id="id_button_ongi_etorri_frogatu" class="button" ng-click="frogatu_click();" translate>FROGATU</button>
+              -->
+              <button id="id_button_ongi_etorri_frogatu" class="button" ng-click="frogatu_click($event);" ng-mouseup="frogatu_mouseup($event)" translate>FROGATU</button>
+            </div>
+            <div class="col col_flex_none">
+                <button id="id_button_ongi_etorri_sistema" class="button" ng-click="sistema_click($event)" ng-mouseup="sistema_mouseup($event)" translate>SISTEMAN SARTU</button>
+                <!--
+                <button id="id_button_ongi_etorri_sistema" class="button" ng-click="sistema_click()" translate>SISTEMA ERABILI NAHI BADUZU SAKATU HEMEN</button>              
+                -->
+            </div>
+        </div> 
+    </ion-content>    
+    
+       
+</ion-view>

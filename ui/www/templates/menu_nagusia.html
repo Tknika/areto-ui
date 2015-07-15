@@ -1,0 +1,107 @@
+<!--
+<ion-list>
+                        <ion-scroll  class="available-scroller ion_scroll_menu_nagusia" direction="y">            
+                            <ion-radio ng-repeat="item_menu_nagusia in menu_nagusia_array" ng-value="item_menu_nagusia.value" ng-model="ion_radio_menu_nagusia.value" ng-change="on_menu_nagusia_change(item_menu_nagusia);" name="ion_radio_menu_nagusia"><translate>{{ item_menu_nagusia.title }}</translate></ion-radio>
+                        </ion-scroll>      
+</ion-list>
+-->
+<!--
+<ion-side-menu side="left" expose-aside-when="large" class="menu_nagusia_ion_side_menu_custom ion_side_menu_custom" id="ion_side_menu_custom" ng-controller="MenuNagusiaCtrl">
+    <ion-content>
+      <ion-list>
+        <ion-item id="id_dispositivo_grabazioa" nav-clear menu-close href="#/tab/grabazioa" ng-click="on_nagusia_grabazioa_sidemenu_select()">
+          <translate>Grabazioa</translate>
+        </ion-item>
+        <ion-item id="id_dispositivo_think_client_sarea" nav-clear menu-close href="#/tab/think_client_sarea" ng-click="on_nagusia_think_client_sarea_sidemenu_select()">
+          <translate>Think Client Sarea</translate>
+        </ion-item>
+        <ion-item id="id_dispositivo_sarrera" nav-clear menu-close href="#/tab/sarrera" ng-click="on_nagusia_sarrera_sidemenu_select()">
+          <translate>Sarrera</translate>
+        </ion-item>
+        <ion-item id="id_dispositivo_feedback" nav-clear menu-close href="#/tab/feedback" ng-click="on_nagusia_feedback_sidemenu_select()">
+          <translate>Feedback</translate>
+        </ion-item>
+        <ion-item id="id_dispositivo_plasma" nav-clear menu-close href="#/tab/plasma" ng-click="on_nagusia_plasma_sidemenu_select()">
+          <translate>Plasma</translate>
+        </ion-item>
+        <ion-item id="id_dispositivo_proiektorea" nav-clear menu-close href="#/tab/proiektorea" ng-click="on_nagusia_proiektorea_sidemenu_select()">
+          <translate>Proiektorea</translate>
+        </ion-item>
+        <ion-item id="id_dispositivo_arbela" nav-clear menu-close href="#/tab/arbela" ng-click="on_nagusia_arbela_sidemenu_select()">
+          <translate>Arbela</translate>
+        </ion-item>       
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+-->
+<img class="menu_nagusia_img" src="img/ionic-imagen-background.png">
+<div class="row menu_nagusia_row_grabazioa">
+    <div class="col col-25">
+        <button id="id_button_menu_nagusia_grabazioa" class="button" ng-click="on_nagusia_grabazioa_sidemenu_select();" ng-hide="true" translate>Grabazioa</button>
+    </div>
+    <div class="col col-25">
+        &nbsp;
+    </div>
+    <div class="col col-25">
+        &nbsp;
+    </div>
+    <div class="col col-25">
+        &nbsp;
+    </div>
+</div>
+<div id="id_menu_nagusia_row_think_client_sarea" class="row menu_nagusia_row_think_client_sarea">
+    <div class="col col-25">
+        &nbsp;
+    </div>
+    <div class="col col-25">
+        &nbsp;
+    </div>
+    <div class="col col-25">
+        <button id="id_button_menu_nagusia_think_client_sarea" class="button" ng-click="on_nagusia_think_client_sarea_sidemenu_select();" ng-hide="true" translate>Sarea</button>
+    </div>
+    <div class="col col-25">
+        &nbsp;
+    </div>
+</div>
+<div id="id_menu_nagusia_row_feedback" class="row menu_nagusia_row_feedback">
+    <div class="col col-25">
+        &nbsp;
+    </div>
+    <div class="col col-25">
+        &nbsp;
+    </div>
+    <div class="col col-25">
+        <button id="id_button_menu_nagusia_feedback" class="button" ng-click="on_nagusia_feedback_sidemenu_select();" translate>Feedback</button>
+    </div>
+    <div class="col col-25">
+        &nbsp;
+    </div>
+</div>
+<div id="id_menu_nagusia_row_sarrera" class="row menu_nagusia_row_sarrera">
+    <div class="col col-25">
+        <button id="id_button_menu_nagusia_feedback" class="button" ng-click="on_nagusia_sarrera_sidemenu_select();" translate>Sarrera</button>
+    </div>
+    <div class="col col-25">
+        &nbsp;
+    </div>
+    <div class="col col-25">
+        &nbsp;
+    </div>    
+    <div class="col col-25">
+        &nbsp;
+    </div>
+</div>
+<div id="id_menu_nagusia_row_plasma" class="row menu_nagusia_row_plasma">
+    <div class="col col-25">
+        &nbsp;
+    </div>
+    <div class="col col-25 menu_nagusia_col_plasma">
+        <button id="id_button_menu_nagusia_plasma" class="button button-block" ng-click="on_nagusia_plasma_sidemenu_select();" translate>Plasma</button>
+    </div>    
+    <div class="col col-25 menu_nagusia_col_proiektorea">
+        <button id="id_button_menu_nagusia_proiektorea" class="button button-block" ng-click="on_nagusia_proiektorea_sidemenu_select();" translate>Proiektorea</button>
+    </div>    
+    <div class="col col-25 menu_nagusia_col_arbela">
+        <button id="id_button_menu_nagusia_arbela" class="button button-block" ng-click="on_nagusia_arbela_sidemenu_select();" translate>Arbela</button>
+    </div>
+</div>

@@ -1,0 +1,222 @@
+<ion-view cache-view="false">
+    <ion-nav-title translate>DEITU/ESKEGI</ion-nav-title>
+    <ion-content class="ion-content-custom">
+        <div class="row">
+        <div class="col col_flex_none">
+        <div id="id_div_telefonoa"> 
+          <div class="row">
+              <input type="text" class="input-text-border" value="{{deitu_eskegi_telefono_zenbakia}}"/>
+          </div>
+          <div class="row">
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia1" class="button" ng-click="deitu_eskegi_zenbakia_click(1)">1</button>
+              </div>
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia2" class="button" ng-click="deitu_eskegi_zenbakia_click(2)">2</button>
+              </div>
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia3" class="button" ng-click="deitu_eskegi_zenbakia_click(3)">3</button>
+              </div>
+              <!--
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia_ezabatu" class="button" ng-click="deitu_eskegi_zenbakia_ezabatu_click()" translate>ZENBAKIA EZABATU</button>
+              </div>
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_helbide_liburua" class="button" ng-click="deitu_eskegi_helbide_liburua_click()" translate>HELBIDE LIBURUA</button>
+              </div>
+              -->
+          </div>
+          <div class="row">
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia1" class="button" ng-click="deitu_eskegi_zenbakia_click(4)">4</button>
+              </div>
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia2" class="button" ng-click="deitu_eskegi_zenbakia_click(5)">5</button>
+              </div>
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia3" class="button" ng-click="deitu_eskegi_zenbakia_click(6)">6</button>
+              </div>
+              <!--
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_atzeratu" class="button" ng-click="deitu_eskegi_atzeratu_click()" translate>ATZERATU</button>
+              </div>
+              -->
+          </div>
+          <div class="row">
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia1" class="button" ng-click="deitu_eskegi_zenbakia_click(7)">7</button>
+              </div>
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia2" class="button" ng-click="deitu_eskegi_zenbakia_click(8)">8</button>
+              </div>
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia3" class="button" ng-click="deitu_eskegi_zenbakia_click(9)">9</button>
+              </div>
+           </div>
+          <div class="row">
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia_asterisco" class="button" ng-click="deitu_eskegi_zenbakia_click('*')">*</button>
+              </div>
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia0" class="button" ng-click="deitu_eskegi_zenbakia_click(0)">0</button>
+              </div>
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia_almohadilla" class="button" ng-click="deitu_eskegi_zenbakia_click('#')">#</button>
+              </div>
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia_puntua" class="button" ng-click="deitu_eskegi_zenbakia_click('.')">.</button>
+              </div>
+              <!--
+               <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_deitu" class="button" ng-click="deitu_eskegi_deitu_click()" translate>DEITU</button>
+              </div>
+              -->
+          </div>
+          <div class="row">  
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_zenbakia_ezabatu" class="button" ng-click="deitu_eskegi_zenbakia_ezabatu_click()" translate>ZENBAKIA EZABATU</button>
+              </div>
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_helbide_liburua" class="button" ng-click="deitu_eskegi_helbide_liburua_click()" translate>HELBIDE LIBURUA</button>
+              </div>
+          </div>
+          <div class="row">  
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_atzeratu" class="button" ng-click="deitu_eskegi_atzeratu_click()" translate>ATZERATU</button>
+              </div>
+              <div class="col col_flex_none">
+                <button id="id_button_deitu_eskegi_deitu" class="button" ng-click="deitu_eskegi_deitu_click()" translate>DEITU</button>
+              </div>
+          </div>     
+        </div>
+        <div class="row">      
+        <div id="id_div_llamadas">
+                <h4 translate>AKTIBO DAUDEN DEIAK</h4>
+                <div class="row">
+                    <div class="list">
+                        <ion-scroll  class="available-scroller ion_scroll_contactos" direction="y">            
+                            <ion-radio ng-repeat="item_llamada in llamadas" ng-value="item_llamada.value" ng-model="radio_llamada.value" ng-change="llamadas_change(item_llamada);" name="ion_radio_llamadas"> {{ item_llamada.title }}</ion-radio>
+                        </ion-scroll>      
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col col_flex_none">
+                    <button id="id_button_deitu_eskegi_helbide_liburua_deitu" class="button" ng-click="deitu_eskegi_aktibo_dauden_deiak_eskegi_click()">ESKEGI</button>
+                  </div>                 
+                </div>                
+        </div>
+        </div>    
+        </div>
+        </div>
+        <div class="row">            
+        <div class="col col_flex_none">
+        <div class="row">    
+            <div id="id_div_contactos">
+                <h4 translate>HELBIDE LIBURUA</h4>
+                <div class="row">
+                    <div class="list">
+                        <ion-scroll  class="available-scroller ion_scroll_contactos" direction="y">            
+                            <ion-radio ng-repeat="item in contactos" ng-value="item.value" ng-model="radio_contacto.value" ng-change="contactos_change(item);" name="ion_radio_contactos"> {{ item.title }}</ion-radio>
+                        </ion-scroll>      
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col col_flex_none">
+                    <button id="id_button_deitu_eskegi_helbide_liburua_deitu" class="button" ng-click="deitu_eskegi_helbide_liburua_deitu_click()">DEITU</button>
+                  </div>
+                  <div class="col col_flex_none">
+                    <button id="id_button_deitu_eskegi_helbide_liburua_ezeztatu" class="button" ng-click="deitu_eskegi_helbide_liburua_ezeztatu_click()" translate>EZEZTATU</button>
+                  </div>
+                </div>
+            </div>
+        </div>    
+        <div class="row">            
+            <div id="id_div_anchos_banda">
+                <h4 translate>BANDA ZABALERA</h4>
+                <div class="row">
+                    <div class="list">
+                        <ion-scroll  class="available-scroller ion_scroll_anchos_banda" direction="y">            
+                            <ion-radio ng-repeat="item_ancho_banda in anchos_banda" ng-value="item_ancho_banda.ancho_banda" ng-model="radio_ancho_banda.ancho_banda" ng-change="anchos_banda_change(item_ancho_banda);" name="ion_radio_anchos_banda"> {{item_ancho_banda.title }}</ion-radio>
+                        </ion-scroll>      
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col col_flex_none">
+                    <button id="id_button_deitu_eskegi_banda_zabalera_onetsi" class="button" ng-click="deitu_eskegi_banda_zabalera_onetsi_click()">ONETSI</button>
+                  </div>
+                  <div class="col col_flex_none">
+                    <button id="id_button_deitu_eskegi_banda_zabalera_ezeztatu" class="button" ng-click="deitu_eskegi_banda_zabalera_ezeztatu_click()" translate>EZEZTATU</button>
+                  </div>
+                </div>            
+            </div>
+        </div>
+       
+                <div class="row">
+                    <div id="id_div_deitu_eskegi_soinua">
+                        <h4 translate>EZ MOLESTATU</h4>
+                        <div class="row">  
+                            <div class="col col_flex_none col_input_text_label">
+                                <label><b><translate>EGOERA</translate></b>:</label>
+                            </div>
+                        </div>    
+                        <div class="row">    
+                            <div class="col col_flex_none">
+                              <input type="text" class="input-text-border" value="{{deitu_eskegi_deiak_onartu_egoera}}"/>
+                            </div>
+                        </div>    
+                        <div class="row">    
+                            <div class="col col_flex_none">
+                                <button id="id_button_deitu_eskegi_ez_molestatu_itzali" class="button" ng-click="deitu_eskegi_ez_molestatu_itzali_click()">ITZALI</button>
+                            </div>
+                            <div class="col col_flex_none">
+                              <button id="id_button_deitu_eskegi_ez_molestatu_aktibatu" class="button" ng-click="deitu_eskegi_ez_molestatu_aktibatu_click()" translate>AKTIBATU</button>
+                            </div>
+                         </div>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="id_div_deitu_eskegi_bolumena_solaskidea">
+                        <h4 translate>BOL SOLASKIDEA</h4>
+                        <div class="row">  
+                            <div class="col col_flex_none">
+                                <button class="button" ng-click="deitu_eskegi_bolumena_solaskidea_ken_click()">-</button>
+                            </div>
+                            <div class="col col_flex_none">
+                                <!--
+                                <progress class="vert" max="100" value="{{deitu_eskegi_bolumena_solaskidea_value}}"></progress>
+                                -->
+                                <meter class="meter_class" max="100" value="{{deitu_eskegi_bolumena_solaskidea_value}}"></meter>
+                            </div>                                                                        
+                            <div class="col col_flex_none">
+                                <button class="button" ng-click="deitu_eskegi_bolumena_solaskidea_gehi_click()">+</button>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="id_div_deitu_eskegi_bolumena_solaskidea">
+                        <h4 translate>GURE SOINUA</h4>
+                        <div class="row">  
+                            <div class="col col_flex_none">
+                                <button id="id_button_deitu_eskegi_gure_soinua_itzali" class="button" ng-click="deitu_eskegi_gure_soinua_itzali_click()">ITZALI</button>
+                            </div>
+                            <div class="col col_flex_none">
+                              <button id="id_button_deitu_eskegi_gure_soinua_bidali" class="button" ng-click="deitu_eskegi_gure_soinua_bidali_click()" translate>BIDALI</button>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="row">    
+                    <div id="id_div_deitu_eskegi_graficos">
+                        <h4 translate>GRAFIKOAK</h4>
+                        <div class="row">
+                          <div class="col col_flex_none">
+                            <button id="id_button_deitu_eskegi_grafikoak" class="button" ng-click="deitu_eskegi_grafikoak_click()">GRAFIKOAK</button>
+                          </div>                 
+                        </div>                
+                    </div>            
+                </div>
+         </div>                    
+    </div>        
+    </ion-content>
+</ion-view>     

@@ -1,0 +1,110 @@
+<ion-view cache-view="false">
+    <ion-nav-title translate>DVD</ion-nav-title>
+    <!--
+    <ion-content class="ion-content-custom">
+    -->
+    <ion-content>
+        <div class="row row_menu_nagusia">
+            <div class="col col_flex_none col_menu_nagusia">    
+                <div class="div_menu_nagusia" ng-include src="'templates/menu_nagusia.html'"></div>
+            </div>
+        <div class="col col_flex_none">                                
+        <div id="id_div_dvd_control_de_diveles">
+          <h4 translate>NIBELEN KONTROLA</h4>  
+          <div class="row">
+                        <div class="col col_flex_none col_bolumena_vertical_align_center">
+                            <label><b><translate>BOLUMENA</translate></b></label>
+                        </div>
+                        <div class="col col_flex_none">
+                            <button class="button" ng-click="nagusia_dvd_bolumena_ken_click()">-</button>
+                        </div>
+                        <div class="col col_flex_none">
+                            <!--
+                            <progress class="vert" max="100" value="{{nagusia_dvd_bolumena_value}}"></progress>
+                            -->
+                            <meter class="meter_class" max="100" value="{{nagusia_dvd_bolumena_value}}"></meter>
+                        </div>                                                                        
+                        <div class="col col_flex_none">
+                            <button class="button" ng-click="nagusia_dvd_bolumena_gehi_click()">+</button>
+                        </div>                        
+          </div>
+          <div class="row">  
+            <div class="col col_flex_none">        
+                    <div class="row">
+                        <div class="col">
+                            &nbsp;
+                        </div>
+                        <div class="col">
+                            <button id="id_button_nagusia_dvd_norte" class="button button_dvd_erdian" ng-click="nagusia_dvd_gora_click();" translate>GORA</button>
+                        </div>
+                        <div class="col">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col_flex_none">
+                            <button id="id_button_nagusia_dvd_oeste" class="button" ng-click="nagusia_dvd_ezkerrera_click();" translate>EZKERRERA</button>
+                        </div>
+                        <div class="col col_flex_none">
+                            <button id="id_button_nagusia_dvd_aceptar" class="button" ng-click="nagusia_dvd_onetsi_click();" translate>ONETSI</button>
+                        </div>
+                        <div class="col col_flex_none">
+                            <button id="id_button_nagusia_dvd_este" class="button" ng-click="nagusia_dvd_eskubira_click();" translate>ESKUBIRA</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            &nbsp;
+                        </div>
+                        <div class="col">
+                            <button id="id_button_nagusia_dvd_sur" class="button button_dvd_erdian"  ng-click="nagusia_dvd_behera_click();" translate>BEHERA</button>
+                        </div>
+                        <div class="col">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                        <div class="col col-50">
+                            <button id="id_button_nagusia_dvd_rstep" class="button button-block" ng-click="nagusia_dvd_rstep_click()">RSTEP</button>
+                        </div>
+                        <div class="col col-50">
+                            <button id="id_button_nagusia_dvd_fstep" class="button button-block" ng-click="nagusia_dvd_fstep_click()">FSTEP</button>
+                        </div>                        
+          </div>
+          <div id="id_div_dvd_control_de_diveles">
+          <h4 translate>PLAY</h4>
+            <div class="row">
+                <div class="col col-15">
+                    <button id="id_button_nagusia_dvd_activar" class="button button-block" ng-click="nagusia_dvd_play_click();" translate>PLAY</button>
+                </div>
+                <div class="col col-15">
+                    <button id="id_button_nagusia_dvd_parar" class="button button-block" ng-click="nagusia_dvd_stop_click();" translate>STOP</button>
+                </div>
+                <div class="col col-15">
+                    <button id="id_button_nagusia_dvd_pausa" class="button button-block" ng-click="nagusia_dvd_pause_click();" translate>PAUSE</button>
+                </div>
+                <div class="col col-50">
+                    <button id="id_button_nagusia_dvd_menu_pantalla" class="button button-block" ng-click="nagusia_dvd_menua_pantailan_click();" translate>MENUA PANTAILAN</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-33">
+                    <button id="id_button_nagusia_dvd_retroceder" class="button button-block" ng-click="nagusia_dvd_atzera_click();" translate>ATZERA</button>
+                </div>
+                <div class="col col-33">
+                    <button id="id_button_nagusia_dvd_avanzar" class="button button-block" ng-click="nagusia_dvd_aurrera_click();" translate>AURRERA</button>
+                </div>
+                <div class="col col-33">
+                    <!--
+                    <button class="button" ng-click="nagusia_dvd_on_click();" translate>ON</button>
+                    -->
+                    <button class="button button-block" ng-click="nagusia_dvd_on_click();"><translate>{{nagusia_dvd_on_label}}</translate></button>
+                </div>                
+            </div>
+          </div>
+        </div>
+    </div>        
+    </ion-content>    
+</ion-view>
