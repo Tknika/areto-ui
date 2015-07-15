@@ -6,8 +6,7 @@ The default user interface for Areto is **Areto-UI**, HTML5 hybrid mobile app.
 
 ## components
 
-|Name      | Description                      |
-|---------------------------------------------
-|proxy     | Python daemon (realtime engine)  |
-|public    | HTML5 web (Ionic Framework)      |
-
+|Name          | Description                      |
+|--------------|----------------------------------|
+|**proxy**     | Python daemon (realtime engine)  |
+|**public**    | HTML5 web (Ionic Framework)      |
