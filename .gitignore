@@ -1,5 +1,6 @@
 *.pyc
 .idea/*
+.DS_Store
 
 # Ionic project directories
 node_modules/*
