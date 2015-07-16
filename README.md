@@ -40,3 +40,15 @@ systemctl stop areto-proxy
 journalctl -u areto-proxy -f
 ```
 
+## UI
+
+Areto-UI is based on Ionic Framework. Currently we're using the following **node modules**:
+- bower
+- grunt
+- grunt-angular-gettext
+- socket.io
+
+The Ionic plugins we're using:
+- com.ionic.keyboard
+- org.apache.cordova.console
+- org.apache.cordova.device
