@@ -1,6 +1,7 @@
 *.pyc
 .idea/*
 .DS_Store
+nohup.out
 
 # Ionic project directories
 node_modules/*
