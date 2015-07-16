@@ -8,7 +8,7 @@ from socketio.namespace import BaseNamespace
 from socketio.mixins import RoomsMixin, BroadcastMixin
 import time
 import thread
-
+import os
 import socket
 from multiprocessing import Process
 
@@ -125,6 +125,8 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
 
 
 
+
 if __name__ == '__main__':
     print 'Listening on port 8080'
+    os.chdir('/opt/areto-ui/proxy/')
     SocketIOServer(('0.0.0.0', 8080), Application(),resource="socket.io", policy_server=False).serve_forever()
