@@ -48,7 +48,7 @@ angular.module('starter.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 //intelsat-2015
-.controller('OngiEtorriCtrl', function($scope, $stateParams,xml_data,xml_translation,konfig,gettextCatalog,$funciones,$timeout,$ionicHistory) {
+.controller('OngiEtorriCtrl', function($scope, $stateParams,xml_data,xml_translation,konfig,gettextCatalog,$funciones,$timeout,$ionicHistory,$ionicPopup) {
     $ionicHistory.nextViewOptions({
      disableBack: true
     });
@@ -79,8 +79,10 @@ angular.module('starter.controllers', [])
     $scope.frogatu_click = function(event) {
         $funciones.funciones_bidali_botoi_ebentua(19,event.target.id,$funciones,$timeout);
         send_ongi_etorri_frogatu_message(xml_data,$funciones);
+        var msg=get_espera_translation("espere_comprobando");
+        $scope.espera_erlojua_hasi(msg,$ionicPopup,gettextCatalog);
         //simulando
-        simulando($scope,$timeout);
+        //simulando($scope,$timeout);
     };
     $scope.sistema_mouseup=function(event){
         //alert(event.target.id);
@@ -356,7 +358,7 @@ var espera_erlojua='';
   }
   //////////////////////////////////popup//////////////////////////////
   // Triggered on a button click, or some other target
-  $scope.showPopup=function(msg,title,type,msg_bai,msg_ez) {
+  $scope.showPopup=function(msg,title,type,msg_bai,msg_ez,alert_param) {
             //$scope.data = {}
 
         var buttons=new Array({ text: gettextCatalog.getString('Ez') ,
@@ -374,6 +376,13 @@ var espera_erlojua='';
             if(type=='error'){
                 button_ok=buttons[1];
                 buttons=new Array(button_ok);
+            }else if(alert_param=='X'){
+                if(msg=='OK'){
+                    $scope.espera_erlojua_itxi($scope);
+                    button_ok=buttons[1];
+                    button_ok.text='<b>'+gettextCatalog.getString('Itxi')+'</b>';
+                    buttons=new Array(button_ok);
+                }    
             }
                 
 
@@ -894,18 +903,19 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
 
 //intelsat-2015
 .controller('ProiektoreaCtrl', function($scope, $stateParams,xml_data,$ionicTabsDelegate,$funciones,$state,konfig,$interval,$timeout,gettextCatalog) {
-    if($scope.proiektorea_piztu==null){
-        $scope.proiektorea_piztu=false;
-        $scope.proiektorea_piztu_text=$funciones.get_eragotzita_text(gettextCatalog);
-        $scope.proiektorea_piztu_disabled=true;
-        set_nagusia_proiektorea_all_enabled(false,$funciones);
-    }
     if(konfig.bakup_proiektorea_piztu!=null){
         $scope.proiektorea_piztu=konfig.bakup_proiektorea_piztu;
         $scope.proiektorea_piztu_text=konfig.bakup_proiektorea_piztu_text;
         $scope.proiektorea_piztu_disabled=konfig.bakup_proiektorea_piztu_disabled;
         set_nagusia_proiektorea_all_enabled($scope.proiektorea_piztu,$funciones);
-    }
+    }else{    
+        if($scope.proiektorea_piztu==null){
+            $scope.proiektorea_piztu=false;
+            $scope.proiektorea_piztu_text=$funciones.get_eragotzita_text(gettextCatalog);
+            $scope.proiektorea_piztu_disabled=true;
+            set_nagusia_proiektorea_all_enabled(false,$funciones);
+        }
+    }    
     if(konfig.is_nagusia_proiektorea_create_status_interval_timeout==null){
         konfig.is_nagusia_proiektorea_create_status_interval_timeout=true;
         nagusia_proiektorea_create_status_interval_timeout($state,$funciones,$interval,$timeout);
@@ -1754,7 +1764,7 @@ function call_filtro_msg(msg_in,$state,$rootScope,$ionicPopup,gettextCatalog,$sc
              case "ALERT" :
                  var msg_bai= mezu_v[0]+":"+mezu_v[1]+":"+"OK";
                  var msg_ez= mezu_v[0]+":"+mezu_v[1]+":"+"NOK";
-                 $scope.showPopup(mezu_v[2],'','alert',msg_bai,msg_ez);
+                 $scope.showPopup(mezu_v[2],'','alert',msg_bai,msg_ez,mezu_v[1]);
                  break;
              case "ERROR" :
                  $scope.showPopup(mezu_v[1],'','error',null,null);
@@ -1769,7 +1779,7 @@ function call_filtro_msg(msg_in,$state,$rootScope,$ionicPopup,gettextCatalog,$sc
                  pizarra_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope);
                  break;
              case "PROYECTOR_CENTRAL" :
-                 proyector_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope);
+                 proyector_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope,gettextCatalog);
                  break;
              case "INICIO" :
              case "ESCENARIO" :
@@ -1893,7 +1903,9 @@ function get_espera_translation(auk){
     if(auk=='espere_iniciando'){
         msg='Itxaron momentu bat mesedez, sistema hasieratu arte';
     }else if(auk=='espere_apagando'){
-        msg='Itxaron momentu bat mesedez, sistema itzaltzen ari da';    
+        msg='Itxaron momentu bat mesedez, sistema itzaltzen ari da';
+    }else if(auk=='espere_comprobando'){
+        msg='Itxaron momentu bat mesedez, sistema frogatu arte';
     }else{
         msg=auk;
     }
@@ -2200,7 +2212,7 @@ function seleccion_feed(mezu_v,object_name,$state,konfig,$funciones,xml_data,id_
 function  multzo_feed(sarrera, panel_name, botoiak,$funciones,object_name,xml_data,id_button_aurrizkia){
     $funciones.funciones_multzo_feed(sarrera, panel_name, botoiak,$funciones,object_name,xml_data,id_button_aurrizkia);
 }
-function proyector_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope){
+function proyector_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope,gettextCatalog){
     var object_name='proyector_central';
     var panel_name='encender_apagar';
     var id_button_aurrizkia='id_button_nagusia_proiektore_zentrala_';
@@ -2241,7 +2253,7 @@ function proyector_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scop
                                 break;
 			}
     }else{
-        pantalla_electrica_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope);
+        pantalla_electrica_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope,gettextCatalog);
     }
 }
 function pantalla_entrada_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$rootScope){
@@ -2353,7 +2365,7 @@ function plasma_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$
         }    
     }
 }
-function pantalla_electrica_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope){
+function pantalla_electrica_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope,gettextCatalog){
     var object_name='pantalla_electrica';
     var panel_name='subir_bajar_pantalla';    
     var id_button_aurrizkia='id_button_nagusia_proiektorea_';
@@ -2395,6 +2407,7 @@ function pantalla_electrica_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,kon
                                 break;
 			}
     }
+    pantalla_electrica_bakup_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope,gettextCatalog);
 }
 function dvdgrab_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$rootScope,gettextCatalog){
     var object_name='dvdgrab';
@@ -2572,7 +2585,7 @@ function microfono_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,$rootScope){
 			if (mezu_v[2] == "ON") {
 				micro_luz_feedback(pantalla, "mic_atril2", 1,null,$state,$funciones,xml_data);
 			} else if (mezu_v[2] == "OFF") {
-				micro_luz_feedback(pantalla, "mic_atril2", 2,null,fsiste$state,$funciones,xml_data);
+				micro_luz_feedback(pantalla, "mic_atril2", 2,null,$state,$funciones,xml_data);
 			} else if (mezu_v[2] == "VOLUMEN") {
                             bolumena_bistaratu($rootScope,'soinua_mikr_atril2_bolumena_value',Number(mezu_v[3]),$state,pantalla,$funciones);
 			}
@@ -3360,3 +3373,25 @@ function set_nagusia_plasma_all_enabled(enabled,$funciones){
 function set_nagusia_arbela_all_enabled(enabled,$funciones){
     set_nagusia_proiektorea_all_enabled(enabled,$funciones,'arbela');
 }
+function pantalla_electrica_bakup_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope,gettextCatalog){
+    switch (mezu_v[1]) {
+			case "ON" :
+                               konfig.bakup_proiektorea_piztu=true;
+                               konfig.bakup_proiektorea_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+                               konfig.bakup_proiektorea_piztu_disabled=false;
+                               break;
+			case "OFF" :
+                               konfig.bakup_proiektorea_piztu=false;
+                               konfig.bakup_proiektorea_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+                               konfig.bakup_proiektorea_piztu_disabled=false;                                
+                               break;
+			case "DISABLED" :
+                               konfig.bakup_proiektorea_piztu=false;
+                               konfig.bakup_proiektorea_piztu_text=mezu_v[2];
+                               konfig.bakup_proiektorea_piztu_disabled=false;                                                                
+                               break;        
+			default :
+                               break;
+    }
+}        
+        
