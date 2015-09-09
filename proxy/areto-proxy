@@ -94,12 +94,16 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
         if not msg:
             return
         
+        self.broadcast_event('result', msg )
+        
+        '''
         if (msg in self.no_broadcast ):
             print "*1* jaso da php zerbitzaritik::: "+str(msg)+"NO  broadcast"
             #self.emit('result', msg)
         else:
             print "*2* jaso da php zerbitzaritik::: "+str(msg)+" broadcast"
             self.broadcast_event('result', msg )
+        '''
             
     def on_agindu(self):
         print "agindu........."
