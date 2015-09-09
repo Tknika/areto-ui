@@ -132,5 +132,5 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
 
 if __name__ == '__main__':
     print 'Listening on port 8080'
-    os.chdir('/opt/areto-ui/proxy/')
+    os.chdir(os.path.dirname(os.path.abspath(os.sys.argv[0])))
     SocketIOServer(('0.0.0.0', 8080), Application(),resource="socket.io", policy_server=False).serve_forever()
