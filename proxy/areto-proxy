@@ -71,7 +71,7 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
         
         if not self.client:
             print "Haseratu.....!!!!!!!!!!!!!"
-            self.client = client_module.Client('192.168.110.237', 4321)
+            self.client = client_module.Client(target_host, target_port)
             print "---1---"
             thread.start_new_thread(self.receive, ())
                   
@@ -131,6 +131,11 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
 
 
 if __name__ == '__main__':
-    print 'Listening on port 8080'
+    
+    target_host='192.168.110.237'
+    taget_port=4321
+    listen_port=8080
+    
+    print 'Listening on port '+str(listen_port)
     os.chdir(os.path.dirname(os.path.abspath(os.sys.argv[0])))
-    SocketIOServer(('0.0.0.0', 8080), Application(),resource="socket.io", policy_server=False).serve_forever()
+    SocketIOServer(('0.0.0.0', listen_port), Application(),resource="socket.io", policy_server=False).serve_forever()
