@@ -413,7 +413,8 @@ return {
         funciones_menuko_botoi_zapalketa:function(id_ion_item,$scope,$funciones,type){
             /*var id_item='#'+id_ion_item;
             $funciones.funciones_desel_menu_items(type);
-            angular.element(document.querySelector(id_item)).addClass('active');*/    
+            angular.element(document.querySelector(id_item)).addClass('active');*/
+            //alert(id_ion_item);
         },
         funciones_menuko_botoi_zapalketa_nagusia:function($scope,$funciones){
             $funciones.funciones_menuko_botoi_zapalketa('id_ion_item_nagusia_menu',$scope,$funciones);
@@ -670,7 +671,8 @@ return {
             }else if(type=='feedback'){
                 botoi_array=new Array('id_button_nagusia_feedback_mostrar_contraparte','id_button_nagusia_feedback_mostrar_nuestra_imagen'
                 ,'id_button_nagusia_feedback_dvd','id_button_nagusia_feedback_camara_de_documentos','id_button_nagusia_feedback_portatil1',
-                'id_button_nagusia_feedback_portatil2','id_button_nagusia_feedback_portatil3','id_button_nagusia_feedback_pcsuelo','id_button_nagusia_feedback_atril');
+                'id_button_nagusia_feedback_portatil2','id_button_nagusia_feedback_portatil3','id_button_nagusia_feedback_pcsuelo',
+                'id_button_nagusia_feedback_atril','id_button_nagusia_feedback_mostrar_contraparte_y_nuestra_imagen');
             }else if(type=='sarrera'){
                 botoi_array=new Array('id_button_nagusia_sarrera_dvd','id_button_nagusia_sarrera_camara_de_documentos','id_button_nagusia_sarrera_portatil1'
                 ,'id_button_nagusia_sarrera_portatil2','id_button_nagusia_sarrera_portatil3','id_button_nagusia_sarrera_pcsuelo','id_button_nagusia_sarrera_atril');

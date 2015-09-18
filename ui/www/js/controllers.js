@@ -696,7 +696,7 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
         $scope.feedback_piztu_disabled=konfig.bakup_feedback_piztu_disabled;
         set_nagusia_feedback_all_enabled($scope.feedback_piztu,$funciones);
     } 
-    $scope.on_nagusia_feedback_select = function(index) {        
+    $scope.on_nagusia_feedback_select = function(index) {
         nagusia_feedback_select($ionicTabsDelegate,index,xml_data,$funciones,null,$state);
     };
     $scope.nagusia_feedback_piztu_click=function(){
@@ -740,6 +740,9 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
     $scope.nagusia_feedback_atril_click=function(){
         send_nagusia_feedback_atril_message(xml_data,$funciones);
     }
+    $scope.nagusia_feedback_solaskide_gure_imajina_click=function(){
+        send_nagusia_feedback_solaskide_gure_imajina_message(xml_data,$funciones);
+    }    
     $scope.feedback_piztu_toggle_change=function(){
         if($scope.feedback_piztu==true){
             $scope.feedback_piztu=false;
@@ -1027,17 +1030,18 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
 
 //intelsat-2015
 .controller('ArbelaCtrl', function($scope, $stateParams,xml_data,$ionicTabsDelegate,$funciones,$state,konfig,$interval,$timeout,gettextCatalog) {
-    if($scope.arbela_piztu==null){
-        $scope.arbela_piztu=false;
-        $scope.arbela_piztu_text=$funciones.get_eragotzita_text(gettextCatalog);
-        $scope.arbela_piztu_disabled=true;
-        set_nagusia_arbela_all_enabled(false,$funciones);
-    }
     if(konfig.bakup_arbela_piztu!=null){
         $scope.arbela_piztu=konfig.bakup_arbela_piztu;
         $scope.arbela_piztu_text=konfig.bakup_arbela_piztu_text;
         $scope.arbela_piztu_disabled=konfig.bakup_arbela_piztu_disabled;
         set_nagusia_arbela_all_enabled($scope.arbela_piztu,$funciones);
+    }else{        
+        if($scope.arbela_piztu==null){
+            $scope.arbela_piztu=false;
+            $scope.arbela_piztu_text=$funciones.get_eragotzita_text(gettextCatalog);
+            $scope.arbela_piztu_disabled=true;
+            set_nagusia_arbela_all_enabled(false,$funciones);
+        }
     }    
     if(konfig.is_nagusia_arbela_create_status_interval_timeout==null){
         konfig.is_nagusia_arbela_create_status_interval_timeout=true;
@@ -1776,7 +1780,7 @@ function call_filtro_msg(msg_in,$state,$rootScope,$ionicPopup,gettextCatalog,$sc
                  menu_mezuak_tratatu(mezu_v[1],$state,$scope,$rootScope,$funciones);
                  break;
              case "PIZARRA_DIGITAL" :
-                 pizarra_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope);
+                 pizarra_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope,gettextCatalog);
                  break;
              case "PROYECTOR_CENTRAL" :
                  proyector_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope,gettextCatalog);
@@ -2121,7 +2125,7 @@ function nagusia_erakutsi($state){
     //dispositivo_erakutsi($state,'app.grabazioa');
     dispositivo_erakutsi($state,'app.nagusia');
 }
-function pizarra_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope){
+function pizarra_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope,gettextCatalog){
     var object_name='pizarra_digital';
     var panel_name='encender_apagar';
     var id_button_aurrizkia='id_button_nagusia_arbela_';
@@ -2162,6 +2166,7 @@ function pizarra_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,
                                 break;
 			}
 		}
+                pizarra_bakup_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope,gettextCatalog);
 }
 function dispositiboa_aktibo_dago($state,dispositiboa,object_name,$funciones){
     return $funciones.funciones_dispositiboa_aktibo_dago($state,dispositiboa,object_name,$funciones);
@@ -2702,7 +2707,7 @@ function nagusia_sarrera_select($ionicTabsDelegate,index,xml_data,$funciones,typ
         send_nagusia_sarrera_dispositibo_message(xml_data,$funciones);
     }    
 }
-function nagusia_feedback_select($ionicTabsDelegate,index,xml_data,$funciones,type,$state){
+function nagusia_feedback_select($ionicTabsDelegate,index,xml_data,$funciones,type,$state){    
     if(!is_controller_pantalla_aktibo_dago('app.feedback',$state)){
         /*if(type==null){
             $ionicTabsDelegate.select(index);
@@ -3379,19 +3384,51 @@ function pantalla_electrica_bakup_mezuak_tratatu(mezu_v,$state,$funciones,xml_da
                                konfig.bakup_proiektorea_piztu=true;
                                konfig.bakup_proiektorea_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
                                konfig.bakup_proiektorea_piztu_disabled=false;
+                               set_proiektorea_bakup_konfig(konfig);
                                break;
 			case "OFF" :
                                konfig.bakup_proiektorea_piztu=false;
                                konfig.bakup_proiektorea_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
-                               konfig.bakup_proiektorea_piztu_disabled=false;                                
+                               konfig.bakup_proiektorea_piztu_disabled=false;
+                               set_proiektorea_bakup_konfig(konfig);
                                break;
 			case "DISABLED" :
                                konfig.bakup_proiektorea_piztu=false;
                                konfig.bakup_proiektorea_piztu_text=mezu_v[2];
-                               konfig.bakup_proiektorea_piztu_disabled=false;                                                                
+                               konfig.bakup_proiektorea_piztu_disabled=true;
+                               set_proiektorea_bakup_konfig(konfig);
                                break;        
 			default :
                                break;
     }
-}        
-        
+} 
+function set_proiektorea_bakup_konfig(konfig){
+    konfig.bakup_proiektore_zentrala_piztu=konfig.bakup_proiektorea_piztu;
+    konfig.bakup_proiektore_zentrala_piztu_text=konfig.bakup_proiektorea_piztu_text;
+    konfig.bakup_proiektore_zentrala_piztu_disabled=konfig.bakup_proiektorea_piztu_disabled;
+}    
+function pizarra_bakup_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,$rootScope,gettextCatalog){
+    switch (mezu_v[1]) {
+			case "ON" :
+                               konfig.bakup_arbela_piztu=true;
+                               konfig.bakup_arbela_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+                               $scope.arbela_piztu_disabled=false;     
+                               break;
+			case "OFF" :
+                               konfig.bakup_arbela_piztu=false;
+                               konfig.bakup_arbela_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+                               $scope.arbela_piztu_disabled=false;  
+                               break;
+			case "DISABLED" :
+                               konfig.bakup_arbela_piztu=false;
+                               konfig.bakup_arbela_piztu_text=mezu_v[2];
+                               $scope.arbela_piztu_disabled=true; 
+                               break;        
+			default :
+                               break;
+    }
+}
+function send_nagusia_feedback_solaskide_gure_imajina_message(xml_data,$funciones){
+    var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'pantalla_presidencia','imagen_a_mostrar','mostrar_contraparte_y_nuestra_imagen',$funciones);
+    $funciones.send_xml(xml_string);  
+}

@@ -2,6 +2,7 @@ angular.module('menu_nagusia.controllers', [])
 
 .controller('MenuNagusiaCtrl', function($scope, $stateParams,$state,$scope,$funciones,items_menu,$timeout) {
     $funciones.funciones_menuko_botoi_zapalketa_nagusia($scope,$funciones);
+    //nagusia_dispositibo_sakatua_utzi($funciones,'id_button_menu_nagusia_feedback');            
     menu_nagusia_dispositivo_botoi_zapalketa($state,$scope,$funciones,items_menu);
     /*$scope.$on('set_menu_nagusia_items_enabled', function(event, args){
        //set_menu_nagusia_items_enabled(items_menu);
@@ -29,4 +30,8 @@ function define_menu_nagusia_item_array(){
     result['app.proiektorea']='id_dispositivo_proiektorea';
     result['app.arbela']='id_dispositivo_arbela';
     return result; 
-}          
+}
+/*function nagusia_dispositibo_sakatua_utzi($funciones,id_button){
+    //alert(id_button);
+    $funciones.funciones_sakatua_utzi_id_button(id_button);
+}*/

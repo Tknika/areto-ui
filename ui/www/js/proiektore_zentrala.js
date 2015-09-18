@@ -1,17 +1,19 @@
 angular.module('proiektore_zentrala.controllers', [])
 
 .controller('ProiektoreZentralaCtrl', function($scope, $stateParams,xml_data,$funciones,konfig,gettextCatalog) {
-    if($scope.proiektore_zentrala_piztu==null){
-        $scope.proiektore_zentrala_piztu=false;
-        $scope.proiektore_zentrala_piztu_text=$funciones.get_eragotzita_text(gettextCatalog);
-        $scope.proiektore_zentrala_piztu_disabled=true;
-        set_nagusia_proiektore_zentrala_all_enabled(false,$funciones);
-    }
     if(konfig.bakup_proiektore_zentrala_piztu!=null){
         $scope.proiektore_zentrala_piztu=konfig.bakup_proiektore_zentrala_piztu;
         $scope.proiektore_zentrala_piztu_text=konfig.bakup_proiektore_zentrala_piztu_text;
         $scope.proiektore_zentrala_piztu_disabled=konfig.bakup_proiektore_zentrala_piztu_disabled;
-    }    
+        set_nagusia_proiektore_zentrala_all_enabled($scope.proiektore_zentrala_piztu,$funciones);
+    }else{        
+        if($scope.proiektore_zentrala_piztu==null){
+            $scope.proiektore_zentrala_piztu=false;
+            $scope.proiektore_zentrala_piztu_text=$funciones.get_eragotzita_text(gettextCatalog);
+            $scope.proiektore_zentrala_piztu_disabled=true;
+            set_nagusia_proiektore_zentrala_all_enabled(false,$funciones);
+        }
+    }
     /*if(konfig.is_nagusia_proiektore_zentrala_create_status_interval_timeout==null){
         konfig.is_nagusia_proiektore_zentrala_create_status_interval_timeout=true;
         nagusia_proiektore_zentrala_create_status_interval_timeout($state,$funciones,$interval,$timeout);
