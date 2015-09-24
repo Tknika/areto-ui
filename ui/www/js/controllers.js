@@ -538,6 +538,7 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
 
 //intelsat-2015
 .controller('SarreraCtrl', function($scope, $stateParams,xml_data,$ionicTabsDelegate,$funciones,$state,konfig,$timeout,gettextCatalog) {
+    $scope.nagusia_sarrera_class_active=' active disabled';
     if($scope.sarrera_piztu==null){
         $scope.sarrera_piztu=false;
         /*$scope.sarrera_piztu_text=$funciones.get_eragotzita_text(gettextCatalog);
@@ -682,6 +683,7 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
 
 //intelsat-2015
 .controller('FeedbackCtrl', function($scope, $stateParams,xml_data,$ionicTabsDelegate,$funciones,$state,konfig,gettextCatalog) {
+    $scope.nagusia_feedback_class_active=' active disabled';
     if($scope.feedback_piztu==null){
         $scope.feedback_piztu=false;
         /*$scope.feedback_piztu_text=$funciones.get_eragotzita_text(gettextCatalog);
@@ -797,6 +799,7 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
 
 //intelsat-2015
 .controller('PlasmaCtrl', function($scope, $stateParams,xml_data,$ionicTabsDelegate,$funciones,$state,konfig,$timeout,$rootScope,gettextCatalog) {
+    $scope.nagusia_plasma_class_active=' active disabled';
     if($scope.plasma_piztu==null){
         $scope.plasma_piztu=false;
         $scope.plasma_piztu_text=$funciones.get_eragotzita_text(gettextCatalog);
@@ -906,6 +909,7 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
 
 //intelsat-2015
 .controller('ProiektoreaCtrl', function($scope, $stateParams,xml_data,$ionicTabsDelegate,$funciones,$state,konfig,$interval,$timeout,gettextCatalog) {
+    $scope.nagusia_proiektorea_class_active=' active disabled';
     if(konfig.bakup_proiektorea_piztu!=null){
         $scope.proiektorea_piztu=konfig.bakup_proiektorea_piztu;
         $scope.proiektorea_piztu_text=konfig.bakup_proiektorea_piztu_text;
@@ -1030,6 +1034,7 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
 
 //intelsat-2015
 .controller('ArbelaCtrl', function($scope, $stateParams,xml_data,$ionicTabsDelegate,$funciones,$state,konfig,$interval,$timeout,gettextCatalog) {
+    $scope.nagusia_arbela_class_active=' active disabled';
     if(konfig.bakup_arbela_piztu!=null){
         $scope.arbela_piztu=konfig.bakup_arbela_piztu;
         $scope.arbela_piztu_text=konfig.bakup_arbela_piztu_text;
@@ -2707,7 +2712,7 @@ function nagusia_sarrera_select($ionicTabsDelegate,index,xml_data,$funciones,typ
         send_nagusia_sarrera_dispositibo_message(xml_data,$funciones);
     }    
 }
-function nagusia_feedback_select($ionicTabsDelegate,index,xml_data,$funciones,type,$state){    
+function nagusia_feedback_select($ionicTabsDelegate,index,xml_data,$funciones,type,$state){
     if(!is_controller_pantalla_aktibo_dago('app.feedback',$state)){
         /*if(type==null){
             $ionicTabsDelegate.select(index);
@@ -3431,4 +3436,8 @@ function pizarra_bakup_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$
 function send_nagusia_feedback_solaskide_gure_imajina_message(xml_data,$funciones){
     var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'pantalla_presidencia','imagen_a_mostrar','mostrar_contraparte_y_nuestra_imagen',$funciones);
     $funciones.send_xml(xml_string);  
+}
+function nagusia_dispositibo_sakatua_utzi($funciones,id_button){
+    //alert(id_button);
+    $funciones.funciones_sakatua_utzi_id_button(id_button);
 }
