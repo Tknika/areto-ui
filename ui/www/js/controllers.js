@@ -1003,7 +1003,10 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
     $scope.$on('set_nagusia_proiektorea_on', function(event, args){
         $scope.proiektorea_piztu_disabled=false;
         $scope.proiektorea_piztu=true;
-        $scope.proiektorea_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+        //intelsat-2015
+        //$scope.proiektorea_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+        $scope.proiektorea_piztu_text=nagusia_proiektorea_get_piztu_text(args[0],$funciones,gettextCatalog);        
+
         //$scope.$apply();
         konfig.bakup_proiektorea_piztu_disabled=false;
         konfig.bakup_proiektorea_piztu=true;
@@ -1013,7 +1016,9 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
     $scope.$on('set_nagusia_proiektorea_off', function(event, args){
         $scope.proiektorea_piztu_disabled=false;
         $scope.proiektorea_piztu=false;
-        $scope.proiektorea_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+        //intelsat-2015
+        //$scope.proiektorea_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+        $scope.proiektorea_piztu_text=nagusia_proiektorea_get_itzalita_text(args[0],$funciones,gettextCatalog);
         //$scope.$apply();
         konfig.bakup_proiektorea_piztu_disabled=false;
         konfig.bakup_proiektorea_piztu=false;
@@ -2086,7 +2091,7 @@ function dispositivo_pantalla_presidencia_erakutsi($state){
   dispositivo_erakutsi($state,'app.feedback');      
 }
 function dispositivo_erakutsi($state,dispositivo){
-  $state.go(dispositivo);      
+    $state.go(dispositivo);      
 }
 function dispositivo_pantalla_entrada_erakutsi($state){
   dispositivo_erakutsi($state,'app.sarrera');      
@@ -2229,12 +2234,12 @@ function proyector_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scop
     if (dispositiboa_aktibo_dago($state, mezu_v[0],null,$funciones)) {
         switch (mezu_v[1]) {
 			case "ON" :
-                                set_nagusia_proiektore_zentrala_on($rootScope);
+                                set_nagusia_proiektore_zentrala_on(mezu_v,$rootScope);
 				$funciones.sakatua_utzi('id_button_nagusia_proiektore_zentrala_piztu',object_name,panel_name,'encender',$funciones,xml_data);
                                 $funciones.askatua_utzi('id_button_nagusia_proiektore_zentrala_itzali',object_name,panel_name,'apagar',$funciones,xml_data);
                                 break;
 			case "OFF" :
-                                set_nagusia_proiektore_zentrala_off($rootScope);
+                                set_nagusia_proiektore_zentrala_off(mezu_v,$rootScope);
                                 $funciones.sakatua_utzi('id_button_nagusia_proiektore_zentrala_itzali',object_name,panel_name,'apagar',$funciones,xml_data);
                                 $funciones.askatua_utzi('id_button_nagusia_proiektore_zentrala_piztu',object_name,panel_name,'encender',$funciones,xml_data);
                                 /*OHARRA: beheko 2 lerroak komentatua daude zeren nahikoa da
@@ -2391,12 +2396,12 @@ function pantalla_electrica_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,kon
                                 $funciones.askatua_utzi('id_button_nagusia_proiektorea_igo',object_name,panel_name,'subir',$funciones,xml_data);                                
 				break;
                         case "ON" :
-                                set_nagusia_proiektorea_on($rootScope);
+                                set_nagusia_proiektorea_on(mezu_v,$rootScope);
                                 $funciones.sakatua_utzi('id_button_nagusia_proiektorea_piztu',object_name,panel_name_proiektorea,'encender',$funciones,xml_data);
                                 $funciones.askatua_utzi('id_button_nagusia_proiektorea_itzali',object_name,panel_name_proiektorea,'apagar',$funciones,xml_data);
                                 break;
 			case "OFF" :
-                                set_nagusia_proiektorea_off($rootScope);
+                                set_nagusia_proiektorea_off(mezu_v,$rootScope);
                                 $funciones.sakatua_utzi('id_button_nagusia_proiektorea_itzali',object_name,panel_name_proiektorea,'apagar',$funciones,xml_data);
                                 $funciones.askatua_utzi('id_button_nagusia_proiektorea_piztu',object_name,panel_name_proiektorea,'encender',$funciones,xml_data);                                
 				break;
@@ -3195,12 +3200,22 @@ function set_nagusia_proiektorea_egoera(mezu_v,$scope){
         $scope.proiektorea_piztu_text=mezu_v[2];
     }
 }
-function set_nagusia_proiektorea_on($rootScope){
+function set_nagusia_proiektorea_on(mezu_v,$rootScope){
     var args=new Array();
+    //intelsat-2015
+    args[0]='';
+    if(mezu_v[2]!=null){
+        args[0]=mezu_v[2];
+    }   
     $rootScope.$broadcast('set_nagusia_proiektorea_on', args);
 }
-function set_nagusia_proiektorea_off($rootScope){
+function set_nagusia_proiektorea_off(mezu_v,$rootScope){
     var args=new Array();
+    //intelsat-2015
+    args[0]='';
+    if(mezu_v[2]!=null){
+        args[0]=mezu_v[2];
+    }
     $rootScope.$broadcast('set_nagusia_proiektorea_off', args);
 }
 function set_nagusia_plasma_on($rootScope){
@@ -3352,12 +3367,22 @@ function send_nagusia_arbela_piztu_toggle_message($scope,xml_data,$funciones){
         send_nagusia_arbela_itzali_message(xml_data,$funciones);
     }
 }
-function set_nagusia_proiektore_zentrala_on($rootScope){
+function set_nagusia_proiektore_zentrala_on(mezu_v,$rootScope){
     var args=new Array();
+    //intelsat-2015
+    args[0]='';
+    if(mezu_v[2]!=null){
+        args[0]=mezu_v[2];
+    }
     $rootScope.$broadcast('set_nagusia_proiektore_zentrala_on', args);
 }
-function set_nagusia_proiektore_zentrala_off($rootScope){
+function set_nagusia_proiektore_zentrala_off(mezu_v,$rootScope){
     var args=new Array();
+    //intelsat-2015
+    args[0]='';
+    if(mezu_v[2]!=null){
+        args[0]=mezu_v[2];
+    }
     $rootScope.$broadcast('set_nagusia_proiektore_zentrala_off', args);
 }
 function set_nagusia_proiektore_zentrala_disabled(mezu_v,$rootScope){
@@ -3440,4 +3465,20 @@ function send_nagusia_feedback_solaskide_gure_imajina_message(xml_data,$funcione
 function nagusia_dispositibo_sakatua_utzi($funciones,id_button){
     //alert(id_button);
     $funciones.funciones_sakatua_utzi_id_button(id_button);
+}
+//intelsat-2015
+function nagusia_proiektorea_get_piztu_text(piztu_text,$funciones,gettextCatalog){
+    var result=$funciones.get_piztuta_text(gettextCatalog);
+    if(piztu_text.length>0){
+        result=piztu_text;
+    }
+    return result;
+}
+//intelsat-2015
+function nagusia_proiektorea_get_itzalita_text(itzalita_text,$funciones,gettextCatalog){
+    var result=$funciones.get_itzalita_text(gettextCatalog);
+    if(itzalita_text.length>0){
+        result=itzalita_text;
+    }
+    return result;
 }

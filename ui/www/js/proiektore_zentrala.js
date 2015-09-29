@@ -81,7 +81,9 @@ angular.module('proiektore_zentrala.controllers', [])
     $scope.$on('set_nagusia_proiektore_zentrala_on', function(event, args){
         $scope.proiektore_zentrala_piztu_disabled=false;
         $scope.proiektore_zentrala_piztu=true;
-        $scope.proiektore_zentrala_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+        //intelsat-2015
+        //$scope.proiektore_zentrala_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+        $scope.proiektore_zentrala_piztu_text=proiektore_zentrala_get_piztu_text(args[0],$funciones,gettextCatalog);        
         //$scope.$apply();
         konfig.bakup_proiektore_zentrala_piztu_disabled=false;
         konfig.bakup_proiektore_zentrala_piztu=true;
@@ -91,7 +93,9 @@ angular.module('proiektore_zentrala.controllers', [])
     $scope.$on('set_nagusia_proiektore_zentrala_off', function(event, args){
         $scope.proiektore_zentrala_piztu_disabled=false;
         $scope.proiektore_zentrala_piztu=false;
-        $scope.proiektore_zentrala_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+        //intelsat-2015
+        //$scope.proiektore_zentrala_piztu_text=$funciones.get_itzalita_text(gettextCatalog);        
+        $scope.proiektore_zentrala_piztu_text=proiektore_zentrala_get_itzalita_text(args[0],$funciones,gettextCatalog);        
         //$scope.$apply();
         konfig.bakup_proiektore_zentrala_piztu_disabled=false;
         konfig.bakup_proiektore_zentrala_piztu=false;
@@ -166,4 +170,20 @@ function send_nagusia_proiektore_zentrala_piztu_toggle_message($scope,xml_data,$
 }
 function set_nagusia_proiektore_zentrala_all_enabled(enabled,$funciones){
     $funciones.funciones_set_nagusia_proiektorea_all_enabled(enabled,$funciones,'proiektore_zentrala');
+}
+//intelsat-2015
+function proiektore_zentrala_get_piztu_text(piztu_text,$funciones,gettextCatalog){
+    var result=$funciones.get_piztuta_text(gettextCatalog);
+    if(piztu_text.length>0){
+        result=piztu_text;
+    }
+    return result;
+}
+//intelsat-2015
+function proiektore_zentrala_get_itzalita_text(itzalita_text,$funciones,gettextCatalog){
+    var result=$funciones.get_itzalita_text(gettextCatalog);
+    if(itzalita_text.length>0){
+        result=itzalita_text;
+    }
+    return result;
 }

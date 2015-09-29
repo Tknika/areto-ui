@@ -16,7 +16,7 @@ angular.module('nagusia.controllers', [])
     $scope.toggleLeft();*/
 })
 function menuko_botoi_zapalketa_nagusia($scope,$funciones){
-    $funciones.funciones_menuko_botoi_zapalketa_nagusia($scope,$funciones);
+   $funciones.funciones_menuko_botoi_zapalketa_nagusia($scope,$funciones);
 }
 function define_items_nagusia_dispositiboa(gettextCatalog){
     var result=new Array();

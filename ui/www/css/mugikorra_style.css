@@ -384,3 +384,84 @@ ion-side-menu.menu_nagusia_ion_side_menu_custom{
 .row_klaseak_jaso{
     display:none;
 }
+#id_button_nagusia_dvd_activar{
+    background-image: url("../img/play.png");
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+#id_button_nagusia_dvd_parar{
+    background-image: url("../img/stop48.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#id_button_nagusia_dvd_pausa{
+    background-image: url("../img/pause.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#id_button_nagusia_dvd_retroceder{
+    background-image: url("../img/rewind.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#id_button_nagusia_dvd_avanzar{
+    background-image: url("../img/forward.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.button-power-on{
+    background-image: url("../img/power.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#id_button_nagusia_dvd_norte{
+    background-image: url("../img/up48.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#id_button_nagusia_dvd_sur{
+    background-image: url("../img/down48.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#id_button_nagusia_dvd_este{
+    background-image: url("../img/right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#id_button_nagusia_dvd_oeste{
+    background-image: url("../img/left.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#id_button_nagusia_dvd_aceptar{
+    background-image: url("../img/enter.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#id_div_dvd_control_de_diveles .col_flex_none_mugikorra{
+    flex:none;
+}
+.row_dvd_margin{
+    margin-left: -30px;
+}
+.col_dvd_margin{
+    margin-left: -28px;
+}
+.button-power-off{
+    background-image: url("../img/power_off.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.row_dvd{
+    width:250px;
+}
+.col_dvd_este{
+    margin-left:20px;
+}
+.col_dvd_aceptar{
+    margin-left:-9px;
+}
+.col_dvd_norte,.col_dvd_sur{
+    margin-left:-12px;
+}

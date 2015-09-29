@@ -22,11 +22,17 @@ function simulando($scope,$timeout){
     //$scope.filtro_msg('<sinta sarr="DISPOSITIVO:PANTALLA_PRESIDENCIA"/>');
     //$scope.filtro_msg('<sinta sarr="DISPOSITIVO:PANTALLA_ENTRADA"/>');
     //$scope.filtro_msg('<sinta sarr="DISPOSITIVO:PIZARRA_DIGITAL"/>');
+    //$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:DISABLED:PROJECTOR JUST SHUT OFF AND IS IN 90 SECOND COOL DOWN MODE." />');
+    //$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:ON"/>');
+    //$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:OFF"/>');        
     //$scope.filtro_msg('<sinta sarr="DISPOSITIVO:PANTALLA_ELECTRICA"/>');
     //$scope.filtro_msg('<sinta sarr="DISPOSITIVO:DVD"/>');
     //$scope.filtro_msg('<sinta sarr="DISPOSITIVO:DVDGRAB"/>');
     //$scope.filtro_msg('<sinta sarr="DISPOSITIVO:ORDENADOR_PRINCIPAL"/>');
     //$scope.filtro_msg('<sinta sarr="DISPOSITIVO:CAMARA_DE_DOCUMENTOS"/>');
+    //$scope.filtro_msg('<sinta sarr="PIZARRA_DIGITAL:DISABLED:PROJECTOR JUST SHUT OFF AND IS IN 90 SECOND COOL DOWN MODE."/>');
+    //$scope.filtro_msg('<sinta sarr="PIZARRA_DIGITAL:ON"/>');
+    //$scope.filtro_msg('<sinta sarr="PIZARRA_DIGITAL:OFF"/>');    
     //$scope.filtro_msg('<sinta sarr="DISPOSITIVO:PIZARRA_DIGITAL"/>');
     //$scope.filtro_msg('<sinta sarr="DISPOSITIVO:PROYECTOR_CENTRAL"/>');
     //$scope.filtro_msg('<sinta sarr="ESCENARIO:ENVIAR_CLASES"/>');
@@ -42,6 +48,7 @@ function simulando($scope,$timeout){
     //$scope.filtro_msg('<sinta sarr="INICIO:SEMINARIO/CLASE"/>');
     //$scope.filtro_msg('<sinta sarr="INICIO:PELICULA"/>');
     //$scope.filtro_msg('<sinta sarr="SISTEMA:INICIANDO:6"/>');
+    //$scope.filtro_msg('<sinta sarr="SISTEMA:INICIANDO:8"/>');
     //$scope.filtro_msg('<sinta sarr="MENU:INICIO"/>');
     //$scope.filtro_msg('<sinta sarr="SISTEMA:SALIENDO:6"/>');
     //$scope.filtro_msg('<sinta sarr="ESPERA:espere_iniciando"/>');
@@ -61,6 +68,7 @@ function simulando($scope,$timeout){
     //$scope.filtro_msg('<sinta sarr="ESCENARIO:PELICULA"/>');
     //$scope.filtro_msg('<sinta sarr="MENU:ESCENARIOS"/>');    
     //$scope.filtro_msg('');
+    //$scope.filtro_msg('<sinta sarr="ESPERA:espere_comprobando"/>');
     //simulando_log($scope,$timeout);
     //simulando_log2($scope,$timeout);
     //simulando_log4($scope,$timeout);
@@ -91,8 +99,8 @@ function simulando($scope,$timeout){
         //$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:ON"/>');
 	//$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:MUTE"/>');
 	//$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:NO_MUTE"/>');
-	/*$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:DVD"/>');
-	$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:PCSUELO"/>');
+	//$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:DVD"/>');
+	/*$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:PCSUELO"/>');
 	$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:PORTATIL1"/>');
 	$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:PORTATIL2"/>');
 	$scope.filtro_msg('<sinta sarr="PROYECTOR_CENTRAL:THINK_CLIENT"/>');
@@ -127,6 +135,7 @@ function simulando($scope,$timeout){
 	$scope.filtro_msg('<sinta sarr="PANTALLA_PRESIDENCIA:ATRIL"/>');*/
 	//$scope.filtro_msg('<sinta sarr="PLASMA:OFF"/>');	
         //$scope.filtro_msg('<sinta sarr="PLASMA:ON"/>');
+        //$scope.filtro_msg('<sinta sarr="DISPOSITIVO:PLASMA"/>');
         //$scope.filtro_msg('<sinta sarr="PLASMA:OFF"/>');
         //$scope.filtro_msg('<sinta sarr="PLASMA:ON"/>');
         //$scope.filtro_msg('<sinta sarr="PLASMA:DISABLED:ABCD"/>');
@@ -164,7 +173,9 @@ function simulando($scope,$timeout){
         //$scope.filtro_msg('<sinta sarr="ALERT:COD0:sgfdhfsdgfhfdghgfd"/>');
         //$scope.filtro_msg('<sinta sarr="ESPERA:esperando"/>');
         //$scope.filtro_msg('<sinta sarr="SISTEMA:BIENVENIDO"/>');
+        //$scope.filtro_msg('<sinta sarr="SISTEMA:BIENVENIDO:ON"/>');
         //$scope.filtro_msg('<sinta sarr="MENU:ESCENARIOS"/>');
+        //$scope.filtro_msg('<sinta sarr="MENU:ESCENARIOS:ON"/>');
         //$scope.filtro_msg('<sinta sarr="MENU:PRINCIPAL"/>');
         /*$scope.filtro_msg('<sinta sarr="RED_THINK_CLIENT:CAMARA_DE_DOCUMENTOS"/>');
 	$scope.filtro_msg('<sinta sarr="RED_THINK_CLIENT:DVD"/>');
@@ -196,6 +207,7 @@ function simulando($scope,$timeout){
         //$scope.filtro_msg('<sinta sarr="ERROR:Errore bat gertatu da"/>');
         //$scope.filtro_msg('<sinta sarr="ERROR:bi"/>');
         //$scope.filtro_msg('<sinta sarr="MENU:LLAMARCOLGAR"/>');
+        //$scope.filtro_msg('<sinta sarr="ALERT:X:OK"/>');        
         //simulando_sonido($scope);
         //simulando_argiak($scope);
         //simulando_deitu_eskegi($scope);
@@ -223,9 +235,9 @@ function simulando_sonido($scope){
 	$scope.filtro_msg('<sinta sarr="MICROFONO:5:ON"/>');
 	$scope.filtro_msg('<sinta sarr="MICROFONO:5:OFF"/>');
 	$scope.filtro_msg('<sinta sarr="MICROFONO:5:VOLUMEN:80"/>');
-	$scope.filtro_msg('<sinta sarr="MICROFONO:6:ON"/>');
-	//$scope.filtro_msg('<sinta sarr="MICROFONO:6:OFF"/>');
-	$scope.filtro_msg('<sinta sarr="MICROFONO:6:VOLUMEN:100"/>');
+	//$scope.filtro_msg('<sinta sarr="MICROFONO:6:ON"/>');
+	$scope.filtro_msg('<sinta sarr="MICROFONO:6:OFF"/>');
+	$scope.filtro_msg('<sinta sarr="MICROFONO:6:VOLUMEN:90"/>');
         //
         $scope.filtro_msg('<sinta sarr="SONIDO:VOLUMEN:90"/>');
         $scope.filtro_msg('<sinta sarr="SONIDO:ENTRANTE:OFF"/>');
@@ -237,9 +249,9 @@ function simulando_sonido($scope){
         $scope.filtro_msg('<sinta sarr="MICROFONO:7:ON"/>');
 	$scope.filtro_msg('<sinta sarr="MICROFONO:7:OFF"/>');
 	$scope.filtro_msg('<sinta sarr="MICROFONO:7:VOLUMEN:90"/>');
-        $scope.filtro_msg('<sinta sarr="MICROFONO:8:ON"/>');
-	$scope.filtro_msg('<sinta sarr="MICROFONO:8:OFF"/>');
-	$scope.filtro_msg('<sinta sarr="MICROFONO:8:VOLUMEN:100"/>');
+        $scope.filtro_msg('<sinta sarr="MICROFONO:12:ON"/>');
+	//$scope.filtro_msg('<sinta sarr="MICROFONO:12:OFF"/>');
+	$scope.filtro_msg('<sinta sarr="MICROFONO:12:VOLUMEN:100"/>');
 }
 function simulando_argiak($scope){
                 /*$scope.filtro_msg('<sinta sarr="LUZ:TECHO:ON"/>');

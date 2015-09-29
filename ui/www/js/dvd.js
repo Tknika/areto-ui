@@ -171,4 +171,9 @@ function nagusia_dvd_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$sc
 }
 function nagusia_dvd_set_testua_on($scope,gettextCatalog,dvd_on_label){
     $scope.nagusia_dvd_on_label=gettextCatalog.getString(dvd_on_label);
+    //intelsat-2015
+    $scope.nagusia_dvd_on_class="button-power-off";
+    if(dvd_on_label=="ON"){
+        $scope.nagusia_dvd_on_class="button-power-on";
+    }
 }    
