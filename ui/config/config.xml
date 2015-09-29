@@ -142,8 +142,6 @@
 					<elem name="camara_de_documentos" msg="PIZARRA_DIGITAL:CAMARA_DE_DOCUMENTOS" visible="1" print_text="CAMARA_DE_DOCUMENTOS"/>
 					<elem name="dvdgrab" msg="PIZARRA_DIGITAL:DVDGRAB" visible="1" print_text="DVDGRAB"/>
 					<elem name="atril" msg="PIZARRA_DIGITAL:ATRIL" visible="1" print_text="ATRIL"/>
-					<elem name="camara1" msg="PLASMA:CAMARA_1" visible="1" print_text="CAMARA1"/>
-                    <elem name="camara2" msg="PLASMA:CAMARA_2" visible="1" print_text="CAMARA2"/>
 				</panel>
 				<panel name="camaras_a_pantalla" x="0" y="425" visible="0" print_text="">	
 					<elem name="camara1" msg="PIZARRA_DIGITAL:CAMARA_1" visible="1" print_text="CAMARA_ALUMNO_IZQ"/>
@@ -418,6 +416,8 @@
 					<elem name="atril" msg="PLASMA:ATRIL" visible="1" print_text="ATRIL"/>
 					<elem name="dvdgrab" msg="PROYECTOR_CENTRAL:DVDGRAB" visible="1" print_text="DVDGRAB"/>
                     <elem name="atril" msg="PROYECTOR_CENTRAL:ATRIL" visible="1" print_text="ATRIL"/>
+                    <elem name="camara1" msg="PLASMA:CAMARA_1" visible="1" print_text="CAMARA1"/>
+                    <elem name="camara2" msg="PLASMA:CAMARA_2" visible="1" print_text="CAMARA2"/>
 				</panel>
 			</object>
 			<object name="red_think_client" type="red_think_client" msg="DISPOSITIVO:RED_THINK_CLIENT" visible="1" print_text="RED_THINK_CLIENT" title="RED_THINK_CLIENT">
