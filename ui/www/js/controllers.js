@@ -3520,7 +3520,8 @@ function send_nagusia_plasma_kamera1_message(xml_data,$funciones){
 }
 //intelsat-2015
 function send_nagusia_plasma_kamera2_message(xml_data,$funciones){ 
-  var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'plasma','seleccion_en_pizarra','camara2',$funciones);
+  //var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'plasma','seleccion_en_pizarra','camara2',$funciones);
+  var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'plasma','seleccion_en_pizarra','atril',$funciones);
   alert("sened::: "+xml_string);
   $funciones.send_xml(xml_string);   
 }
