@@ -394,8 +394,6 @@
 					<elem name="portatil3" msg="PROYECTOR_CENTRAL:PORTATIL3" visible="1" print_text="PORTATIL3"/>
 					<elem name="think_client" msg="PROYECTOR_CENTRAL:THINK_CLIENT" visible="1" print_text="THINK_CLIENT"/>
 					<elem name="camara_de_documentos" msg="PROYECTOR_CENTRAL:CAMARA_DE_DOCUMENTOS" visible="1" print_text="CAMARA_DE_DOCUMENTOS"/>
-					<elem name="dvdgrab" msg="PROYECTOR_CENTRAL:DVDGRAB" visible="1" print_text="DVDGRAB"/>
-					<elem name="atril" msg="PROYECTOR_CENTRAL:ATRIL" visible="1" print_text="ATRIL"/>
 				</panel>
 				<panel name="camaras_a_pantalla" x="0" y="425" visible="0" print_text="">	
 					<elem name="camara1" msg="PROYECTOR_CENTRAL:CAMARA_1" visible="1" print_text="CAMARA_ALUMNO_IZQ"/>
@@ -418,6 +416,8 @@
 					<elem name="camara_de_documentos" msg="PLASMA:CAMARA_DE_DOCUMENTOS" visible="1" print_text="CAMARA_DE_DOCUMENTOS"/>
 					<elem name="dvdgrab" msg="PLASMA:DVDGRAB" visible="1" print_text="DVDGRAB"/>
 					<elem name="atril" msg="PLASMA:ATRIL" visible="1" print_text="ATRIL"/>
+					<elem name="dvdgrab" msg="PROYECTOR_CENTRAL:DVDGRAB" visible="1" print_text="DVDGRAB"/>
+                    <elem name="atril" msg="PROYECTOR_CENTRAL:ATRIL" visible="1" print_text="ATRIL"/>
 				</panel>
 			</object>
 			<object name="red_think_client" type="red_think_client" msg="DISPOSITIVO:RED_THINK_CLIENT" visible="1" print_text="RED_THINK_CLIENT" title="RED_THINK_CLIENT">

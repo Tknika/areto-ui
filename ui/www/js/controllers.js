@@ -3514,14 +3514,12 @@ function nagusia_arbela_get_itzalita_text(itzalita_text,$funciones,gettextCatalo
     return nagusia_proiektorea_get_itzalita_text(itzalita_text,$funciones,gettextCatalog);
 }
 //intelsat-2015
-function send_nagusia_plasma_kamera1_message(xml_data,$funciones){
-  alert('hemennnnnnnnnnnnn');  
+function send_nagusia_plasma_kamera1_message(xml_data,$funciones){ 
   var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'plasma','seleccion_en_pizarra','camara1',$funciones);
   $funciones.send_xml(xml_string);   
 }
 //intelsat-2015
-function send_nagusia_plasma_kamera2_message(xml_data,$funciones){
-  alert('horrrrrrrrrrrrrrrr');  
+function send_nagusia_plasma_kamera2_message(xml_data,$funciones){ 
   var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'plasma','seleccion_en_pizarra','camara2',$funciones);
   $funciones.send_xml(xml_string);   
 }
