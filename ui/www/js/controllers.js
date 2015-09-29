@@ -3333,7 +3333,7 @@ function nagusia_proiektorea_create_status_interval($state,$funciones,$interval)
        if (dispositiboa_aktibo_dago($state,'PANTALLA_ELECTRICA',null,$funciones)) {
         nagusia_proiektorea_send_status($funciones);
        }
-    }, 5000);
+    }, 10000);
 }
 function nagusia_proiektorea_send_status($funciones){
     var xml_string='<sinta case="PROYECTOR_CENTRAL:STATUS"/>';
@@ -3351,7 +3351,7 @@ function nagusia_arbela_create_status_interval($state,$funciones,$interval){
        if (dispositiboa_aktibo_dago($state,'PIZARRA_DIGITAL',null,$funciones)) {
         nagusia_arbela_send_status($funciones);
        }
-    }, 5000);
+    }, 10000);
 }
 function nagusia_arbela_send_status($funciones){
     var xml_string='<sinta case="PIZARRA_DIGITAL:STATUS"/>';
