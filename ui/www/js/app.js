@@ -660,6 +660,8 @@ return {
                 angular.element(document.querySelector(id_elem)).addClass('disabled');
             }else{
                 angular.element(document.querySelector(id_elem)).removeClass('disabled');
+                //intelsat-2015
+                angular.element(document.querySelector(id_elem)).removeClass('active');
             }    
         },funciones_set_nagusia_proiektorea_all_enabled:function(enabled,$funciones,type){
             var botoi_array=new Array();
@@ -678,7 +680,8 @@ return {
                 ,'id_button_nagusia_sarrera_portatil2','id_button_nagusia_sarrera_portatil3','id_button_nagusia_sarrera_pcsuelo','id_button_nagusia_sarrera_atril');
             }else if(type=='plasma'){
                 botoi_array=new Array('id_button_nagusia_plasma_dvd','id_button_nagusia_plasma_camara_de_documentos','id_button_nagusia_plasma_portatil1'
-                ,'id_button_nagusia_plasma_portatil2','id_button_nagusia_plasma_portatil3','id_button_nagusia_plasma_pcsuelo','id_button_nagusia_plasma_atril');
+                ,'id_button_nagusia_plasma_portatil2','id_button_nagusia_plasma_portatil3','id_button_nagusia_plasma_pcsuelo','id_button_nagusia_plasma_atril'
+                ,'id_button_nagusia_plasma_camara1','id_button_nagusia_plasma_camara2');
             }else if(type=='arbela'){
                 botoi_array=new Array('id_button_nagusia_arbela_muteatu','id_button_nagusia_arbela_desmuteatu','id_button_nagusia_arbela_dvd'
                 ,'id_button_nagusia_arbela_camara_de_documentos','id_button_nagusia_arbela_portatil1','id_button_nagusia_arbela_portatil2',
@@ -691,9 +694,38 @@ return {
             }    
             var num=botoi_array.length;
             var i=0;
+            //intelsat-2015
+            var is_all_disabled=$funciones.is_all_disabled(enabled,$funciones,type,botoi_array);
             for(i=0;i<num;i++){
-                $funciones.funciones_set_botoi_enabled(botoi_array[i],enabled);
+                //intelsat-2015
+                if($funciones.funciones_is_set_botoi_enabled(enabled,$funciones,type,botoi_array[i],is_all_disabled)){
+                    $funciones.funciones_set_botoi_enabled(botoi_array[i],enabled);
+                }    
             }
+        },is_all_disabled:function(enabled,$funciones,type,botoi_array){
+            var num=botoi_array.length;
+            var i=0;
+            var id_button='';
+            for(i=0;i<num;i++){
+                id_button=botoi_array[i];
+                var id_elem='#'+id_button;
+                if(!angular.element(document.querySelector(id_elem)).hasClass('disabled')){
+                    return false;
+                }
+            }
+            return true;
+        },funciones_is_set_botoi_enabled:function(enabled,$funciones,type,id_button,is_all_disabled){
+            var my_array=new Array('id_button_nagusia_proiektorea_muteatu','id_button_nagusia_proiektorea_desmuteatu',
+            'id_button_nagusia_arbela_muteatu','id_button_nagusia_arbela_desmuteatu',
+            'id_button_nagusia_proiektore_zentrala_muteatu','id_button_nagusia_proiektore_zentrala_desmuteatu');                
+            if(enabled){
+                if(!is_all_disabled){                    
+                    if($funciones.in_array(id_button,my_array)){ 
+                            return false;    
+                    }
+                }
+            }
+            return true;
         }                           
 }})
 /*

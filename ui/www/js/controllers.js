@@ -853,6 +853,14 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
     $scope.nagusia_plasma_atril_click=function(){
         send_nagusia_plasma_atril_message(xml_data,$funciones);
     }
+    //intelsat-2015
+    $scope.nagusia_plasma_kamera1_click=function(){
+        send_nagusia_plasma_kamera1_message(xml_data,$funciones);
+    }
+    //intelsat-2015
+    $scope.nagusia_plasma_kamera2_click=function(){
+        send_nagusia_plasma_kamera2_message(xml_data,$funciones);
+    }
     $scope.plasma_piztu_toggle_change=function(){
         //http://stackoverflow.com/questions/29790767/ionic-angularjs-ion-toggle-doesnt-update-the-model
         if($scope.plasma_piztu==true){
@@ -1124,8 +1132,10 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
     }
     $scope.$on('set_nagusia_arbela_on', function(event, args){
         $scope.arbela_piztu_disabled=false;
-        $scope.arbela_piztu=true;
-        $scope.arbela_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+        $scope.arbela_piztu=true;        
+        //intelsat-2015
+        //$scope.arbela_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+        $scope.arbela_piztu_text=nagusia_arbela_get_piztu_text(args[0],$funciones,gettextCatalog);        
         //$scope.$apply();
         konfig.bakup_arbela_piztu_disabled=false;
         konfig.bakup_arbela_piztu=true;
@@ -1134,8 +1144,11 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
     });
     $scope.$on('set_nagusia_arbela_off', function(event, args){
         $scope.arbela_piztu_disabled=false;
-        $scope.arbela_piztu=false;
-        $scope.arbela_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+        $scope.arbela_piztu=false;        
+        //intelsat-2015
+        //$scope.arbela_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+        $scope.arbela_piztu_text=nagusia_arbela_get_itzalita_text(args[0],$funciones,gettextCatalog);        
+        
         //$scope.$apply();
         konfig.bakup_arbela_piztu_disabled=false;
         konfig.bakup_arbela_piztu=false;
@@ -2142,12 +2155,12 @@ function pizarra_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$scope,
     if (dispositiboa_aktibo_dago($state, mezu_v[0],null,$funciones)) {
 			switch (mezu_v[1]) {
 			case "ON" :
-                                set_nagusia_arbela_on($rootScope);
+                                set_nagusia_arbela_on(mezu_v,$rootScope);
 				$funciones.sakatua_utzi('id_button_nagusia_arbela_piztu',object_name,panel_name,'encender',$funciones,xml_data);
                                 $funciones.askatua_utzi('id_button_nagusia_arbela_itzali',object_name,panel_name,'apagar',$funciones,xml_data);
                                 break;
 			case "OFF" :
-                                set_nagusia_arbela_off($rootScope);
+                                set_nagusia_arbela_off(mezu_v,$rootScope);
                                 $funciones.sakatua_utzi('id_button_nagusia_arbela_itzali',object_name,panel_name,'apagar',$funciones,xml_data);
                                 $funciones.askatua_utzi('id_button_nagusia_arbela_piztu',object_name,panel_name,'encender',$funciones,xml_data);
                                 /*OHARRA: beheko 2 lerroak komentatua daude zeren nahikoa da
@@ -3344,12 +3357,22 @@ function nagusia_arbela_send_status($funciones){
     var xml_string='<sinta case="PIZARRA_DIGITAL:STATUS"/>';
     $funciones.send_xml(xml_string);
 }
-function set_nagusia_arbela_on($rootScope){
+function set_nagusia_arbela_on(mezu_v,$rootScope){
     var args=new Array();
+    //intelsat-2015
+    args[0]='';
+    if(mezu_v[2]!=null){
+        args[0]=mezu_v[2];
+    }
     $rootScope.$broadcast('set_nagusia_arbela_on', args);
 }
-function set_nagusia_arbela_off($rootScope){
+function set_nagusia_arbela_off(mezu_v,$rootScope){
     var args=new Array();
+    //intelsat-2015
+    args[0]='';
+    if(mezu_v[2]!=null){
+        args[0]=mezu_v[2];
+    }
     $rootScope.$broadcast('set_nagusia_arbela_off', args);
 }
 function set_nagusia_arbela_disabled(mezu_v,$rootScope){
@@ -3481,4 +3504,24 @@ function nagusia_proiektorea_get_itzalita_text(itzalita_text,$funciones,gettextC
         result=itzalita_text;
     }
     return result;
+}
+//intelsat-2015
+function nagusia_arbela_get_piztu_text(piztu_text,$funciones,gettextCatalog){
+    return nagusia_proiektorea_get_piztu_text(piztu_text,$funciones,gettextCatalog);
+}
+//intelsat-2015
+function nagusia_arbela_get_itzalita_text(itzalita_text,$funciones,gettextCatalog){
+    return nagusia_proiektorea_get_itzalita_text(itzalita_text,$funciones,gettextCatalog);
+}
+//intelsat-2015
+function send_nagusia_plasma_kamera1_message(xml_data,$funciones){
+  alert('hemennnnnnnnnnnnn');  
+  var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'plasma','seleccion_en_pizarra','camara1',$funciones);
+  $funciones.send_xml(xml_string);   
+}
+//intelsat-2015
+function send_nagusia_plasma_kamera2_message(xml_data,$funciones){
+  alert('horrrrrrrrrrrrrrrr');  
+  var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'plasma','seleccion_en_pizarra','camara2',$funciones);
+  $funciones.send_xml(xml_string);   
 }
