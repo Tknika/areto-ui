@@ -128,7 +128,8 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
             self.client = client_module.Client(target_host, target_port)
             thread.start_new_thread(self.receive, ())
  
-        print "bidali php zerbitzarira:: "+datetime.fromtimestamp( int(now/1000)  ).strftime('%Y-%m-%d %H:%M:%S') +" cmd: "+str(cmd)
+        now=time.ctime()
+        print "*1* bidali php zerbitzarira:: "+now +" cmd: "+str(cmd)
         self.client.send(cmd)
                 
 
@@ -143,13 +144,14 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
                     self.resp(r.strip())
     
     def resp(self,msg):
+        now=time.ctime()
         if not msg:
             return
         if (msg in self.no_broadcast ):
-            print "*2* bidali intefazera ::: "+datetime.fromtimestamp( int(now/1000)  ).strftime('%Y-%m-%d %H:%M:%S') +" cmd: "+str(msg)+" NO broadcast"
+            print "*2* bidali intefazera ::: "+now+" cmd: "+str(msg)+" NO broadcast"
             self._registry[self._registry_order[-1]].emit('result', msg)
         else:
-            print "*2* bidali intefazera ::: "+datetime.fromtimestamp( int(now/1000)  ).strftime('%Y-%m-%d %H:%M:%S') +" cmd: "+str(msg)+" broadcast"
+            print "*2* bidali intefazera ::: "+now+" cmd: "+str(msg)+" broadcast"
             self.broadcast_event('result', msg )
         
             
