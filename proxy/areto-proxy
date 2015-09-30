@@ -126,8 +126,8 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
         if not self.client:
             self.client = client_module.Client(target_host, target_port)
             thread.start_new_thread(self.receive, ())
-                  
-        print "bidali php zerbitzarira:: "+str(cmd)
+ 
+        print "bidali php zerbitzarira:: "+datetime.fromtimestamp( int(now/1000)  ).strftime('%Y-%m-%d %H:%M:%S') +" cmd: "+str(cmd)
         self.client.send(cmd)
                 
 
@@ -144,12 +144,11 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
     def resp(self,msg):
         if not msg:
             return
-        print "registry::: "+str(self._registry_order)
         if (msg in self.no_broadcast ):
-            print "*2* jaso da php zerbitzaritik::: "+str(msg)+" NO broadcast"
+            print "*2* jaso da php zerbitzaritik::: "+datetime.fromtimestamp( int(now/1000)  ).strftime('%Y-%m-%d %H:%M:%S') +" cmd: "+str(msg)+" NO broadcast"
             self._registry[self._registry_order[-1]].emit('result', msg)
         else:
-            print "*2* jaso da php zerbitzaritik::: "+str(msg)+" broadcast"
+            print "*2* jaso da php zerbitzaritik::: "+datetime.fromtimestamp( int(now/1000)  ).strftime('%Y-%m-%d %H:%M:%S') +" cmd: "+str(msg)+" broadcast"
             self.broadcast_event('result', msg )
         
             
