@@ -35,7 +35,6 @@ class Client():
         except:
             self.connected = False
         
-        print "--00---"
         return self.socket
         
         #thread.start_new_thread(self.receive, ())
