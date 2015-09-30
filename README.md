@@ -48,7 +48,7 @@ Areto-UI is based on Ionic Framework. So first of all we need:
 - [Node.js](https://nodejs.org/en/)
 - [Ionic Framework](http://ionicframework.com/)
 
-After installing Node and Ionic, you have to create a blank project and move the files generated to the areto-ui source:
+After installing Node and Ionic, you can download de source and configure the environment: 
 
 ```sh
 # Download it using git clone
