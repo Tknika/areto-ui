@@ -83,11 +83,14 @@ angular.module('proiektore_zentrala.controllers', [])
         $scope.proiektore_zentrala_piztu=true;
         //intelsat-2015
         //$scope.proiektore_zentrala_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
-        $scope.proiektore_zentrala_piztu_text=proiektore_zentrala_get_piztu_text(args[0],$funciones,gettextCatalog);        
+        var proiektore_zentrala_piztu_text_value=proiektore_zentrala_get_piztu_text(args[0],$funciones,gettextCatalog);
+        $scope.proiektore_zentrala_piztu_text=proiektore_zentrala_piztu_text_value;        
         //$scope.$apply();
         konfig.bakup_proiektore_zentrala_piztu_disabled=false;
         konfig.bakup_proiektore_zentrala_piztu=true;
-        konfig.bakup_proiektore_zentrala_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+        //intelsat-2015
+        //konfig.bakup_proiektore_zentrala_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+        konfig.bakup_proiektore_zentrala_piztu_text=proiektore_zentrala_piztu_text_value;
         set_nagusia_proiektore_zentrala_all_enabled(true,$funciones);
     });
     $scope.$on('set_nagusia_proiektore_zentrala_off', function(event, args){
@@ -95,11 +98,14 @@ angular.module('proiektore_zentrala.controllers', [])
         $scope.proiektore_zentrala_piztu=false;
         //intelsat-2015
         //$scope.proiektore_zentrala_piztu_text=$funciones.get_itzalita_text(gettextCatalog);        
-        $scope.proiektore_zentrala_piztu_text=proiektore_zentrala_get_itzalita_text(args[0],$funciones,gettextCatalog);        
+        var proiektore_zentrala_piztu_text_value=proiektore_zentrala_get_itzalita_text(args[0],$funciones,gettextCatalog); 
+        $scope.proiektore_zentrala_piztu_text=proiektore_zentrala_piztu_text_value;       
         //$scope.$apply();
         konfig.bakup_proiektore_zentrala_piztu_disabled=false;
         konfig.bakup_proiektore_zentrala_piztu=false;
-        konfig.bakup_proiektore_zentrala_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+        //intelsat-2015
+        //konfig.bakup_proiektore_zentrala_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+        konfig.bakup_proiektore_zentrala_piztu_text=proiektore_zentrala_piztu_text_value;
         set_nagusia_proiektore_zentrala_all_enabled(false,$funciones);
     });
     $scope.$on('set_nagusia_proiektore_zentrala_disabled', function(event, args){

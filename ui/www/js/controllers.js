@@ -843,6 +843,8 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
     }
     $scope.nagusia_plasma_portatil3_click=function(){
         send_nagusia_plasma_portatil3_message(xml_data,$funciones);
+        //simulando
+        //simulando($scope,$timeout);
     }
     $scope.nagusia_plasma_think_client_click=function(){
         send_nagusia_plasma_think_client_message(xml_data,$funciones);
@@ -1013,12 +1015,15 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
         $scope.proiektorea_piztu=true;
         //intelsat-2015
         //$scope.proiektorea_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
-        $scope.proiektorea_piztu_text=nagusia_proiektorea_get_piztu_text(args[0],$funciones,gettextCatalog);        
+        var proiektorea_piztu_text_value=nagusia_proiektorea_get_piztu_text(args[0],$funciones,gettextCatalog);   
+        $scope.proiektorea_piztu_text=proiektorea_piztu_text_value;     
 
         //$scope.$apply();
         konfig.bakup_proiektorea_piztu_disabled=false;
         konfig.bakup_proiektorea_piztu=true;
-        konfig.bakup_proiektorea_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+        //intelsat-2015
+        //konfig.bakup_proiektorea_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+        konfig.bakup_proiektorea_piztu_text=proiektorea_piztu_text_value;
         set_nagusia_proiektorea_all_enabled(true,$funciones);
     });
     $scope.$on('set_nagusia_proiektorea_off', function(event, args){
@@ -1026,11 +1031,14 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
         $scope.proiektorea_piztu=false;
         //intelsat-2015
         //$scope.proiektorea_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
-        $scope.proiektorea_piztu_text=nagusia_proiektorea_get_itzalita_text(args[0],$funciones,gettextCatalog);
+        var proiektorea_piztu_text_value=nagusia_proiektorea_get_itzalita_text(args[0],$funciones,gettextCatalog);
+        $scope.proiektorea_piztu_text=proiektorea_piztu_text_value;
         //$scope.$apply();
         konfig.bakup_proiektorea_piztu_disabled=false;
         konfig.bakup_proiektorea_piztu=false;
-        konfig.bakup_proiektorea_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+        //intelsat-2015
+        //konfig.bakup_proiektorea_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+        konfig.bakup_proiektorea_piztu_text=proiektorea_piztu_text_value;
         set_nagusia_proiektorea_all_enabled(false,$funciones);
     });
     $scope.$on('set_nagusia_proiektorea_disabled', function(event, args){
@@ -1135,11 +1143,14 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
         $scope.arbela_piztu=true;        
         //intelsat-2015
         //$scope.arbela_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
-        $scope.arbela_piztu_text=nagusia_arbela_get_piztu_text(args[0],$funciones,gettextCatalog);        
+        var arbela_piztu_text_value=nagusia_arbela_get_piztu_text(args[0],$funciones,gettextCatalog);
+        $scope.arbela_piztu_text=arbela_piztu_text_value;        
         //$scope.$apply();
         konfig.bakup_arbela_piztu_disabled=false;
         konfig.bakup_arbela_piztu=true;
-        konfig.bakup_arbela_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+        //intelsat-2015
+        //konfig.bakup_arbela_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+        konfig.bakup_arbela_piztu_text=arbela_piztu_text_value;
         set_nagusia_arbela_all_enabled(true,$funciones);
     });
     $scope.$on('set_nagusia_arbela_off', function(event, args){
@@ -1147,12 +1158,15 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
         $scope.arbela_piztu=false;        
         //intelsat-2015
         //$scope.arbela_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
-        $scope.arbela_piztu_text=nagusia_arbela_get_itzalita_text(args[0],$funciones,gettextCatalog);        
+        var arbela_piztu_text_value=nagusia_arbela_get_itzalita_text(args[0],$funciones,gettextCatalog);
+        $scope.arbela_piztu_text=arbela_piztu_text_value;        
         
         //$scope.$apply();
         konfig.bakup_arbela_piztu_disabled=false;
         konfig.bakup_arbela_piztu=false;
-        konfig.bakup_arbela_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+        //intelsat-2015
+        //konfig.bakup_arbela_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+        konfig.bakup_arbela_piztu_text=arbela_piztu_text_value;
         set_nagusia_arbela_all_enabled(false,$funciones);
     });
     $scope.$on('set_nagusia_arbela_disabled', function(event, args){
@@ -3333,7 +3347,7 @@ function nagusia_proiektorea_create_status_interval($state,$funciones,$interval)
        if (dispositiboa_aktibo_dago($state,'PANTALLA_ELECTRICA',null,$funciones)) {
         nagusia_proiektorea_send_status($funciones);
        }
-    }, 10000);
+    }, 5000);
 }
 function nagusia_proiektorea_send_status($funciones){
     var xml_string='<sinta case="PROYECTOR_CENTRAL:STATUS"/>';
@@ -3351,7 +3365,7 @@ function nagusia_arbela_create_status_interval($state,$funciones,$interval){
        if (dispositiboa_aktibo_dago($state,'PIZARRA_DIGITAL',null,$funciones)) {
         nagusia_arbela_send_status($funciones);
        }
-    }, 10000);
+    }, 5000);
 }
 function nagusia_arbela_send_status($funciones){
     var xml_string='<sinta case="PIZARRA_DIGITAL:STATUS"/>';
@@ -3435,13 +3449,19 @@ function pantalla_electrica_bakup_mezuak_tratatu(mezu_v,$state,$funciones,xml_da
     switch (mezu_v[1]) {
 			case "ON" :
                                konfig.bakup_proiektorea_piztu=true;
-                               konfig.bakup_proiektorea_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+                               //intelsat-2015
+                               //konfig.bakup_proiektorea_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+                               var proiektorea_piztu_text_value=nagusia_proiektorea_get_piztu_text(mezu_v[2],$funciones,gettextCatalog);
+                               konfig.bakup_proiektorea_piztu_text=proiektorea_piztu_text_value;
                                konfig.bakup_proiektorea_piztu_disabled=false;
                                set_proiektorea_bakup_konfig(konfig);
                                break;
 			case "OFF" :
                                konfig.bakup_proiektorea_piztu=false;
-                               konfig.bakup_proiektorea_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+                               //intelsat-2015
+                               //konfig.bakup_proiektorea_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+                               var proiektorea_piztu_text_value=nagusia_proiektorea_get_itzalita_text(mezu_v[2],$funciones,gettextCatalog);
+                               konfig.bakup_proiektorea_piztu_text=proiektorea_piztu_text_value;                               
                                konfig.bakup_proiektorea_piztu_disabled=false;
                                set_proiektorea_bakup_konfig(konfig);
                                break;
@@ -3464,12 +3484,18 @@ function pizarra_bakup_mezuak_tratatu(mezu_v,$state,$funciones,xml_data,konfig,$
     switch (mezu_v[1]) {
 			case "ON" :
                                konfig.bakup_arbela_piztu=true;
-                               konfig.bakup_arbela_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+                               //intelsat-2015
+                               //konfig.bakup_arbela_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
+                               var arbela_piztu_text_value=nagusia_arbela_get_piztu_text(mezu_v[2],$funciones,gettextCatalog);
+                               konfig.bakup_arbela_piztu_text=arbela_piztu_text_value;
                                $scope.arbela_piztu_disabled=false;     
                                break;
 			case "OFF" :
                                konfig.bakup_arbela_piztu=false;
-                               konfig.bakup_arbela_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+                               //intelsat-2015
+                               //konfig.bakup_arbela_piztu_text=$funciones.get_itzalita_text(gettextCatalog);
+                               var arbela_piztu_text_value=nagusia_arbela_get_itzalita_text(mezu_v[2],$funciones,gettextCatalog);
+                               konfig.bakup_arbela_piztu_text=arbela_piztu_text_value;
                                $scope.arbela_piztu_disabled=false;  
                                break;
 			case "DISABLED" :
@@ -3514,12 +3540,12 @@ function nagusia_arbela_get_itzalita_text(itzalita_text,$funciones,gettextCatalo
     return nagusia_proiektorea_get_itzalita_text(itzalita_text,$funciones,gettextCatalog);
 }
 //intelsat-2015
-function send_nagusia_plasma_kamera1_message(xml_data,$funciones){ 
+function send_nagusia_plasma_kamera1_message(xml_data,$funciones){  
   var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'plasma','seleccion_en_pizarra','camara1',$funciones);
   $funciones.send_xml(xml_string);   
 }
 //intelsat-2015
-function send_nagusia_plasma_kamera2_message(xml_data,$funciones){ 
+function send_nagusia_plasma_kamera2_message(xml_data,$funciones){  
   var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'plasma','seleccion_en_pizarra','camara2',$funciones);
   $funciones.send_xml(xml_string);   
 }
