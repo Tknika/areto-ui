@@ -77,7 +77,20 @@ We're using the following **node modules**:
 - grunt-angular-gettext
 - socket.io
 
+To install Node modules:
+
+```
+npm install bower
+```
+
 Ionic plugins:
+- com.tlantic.plugins.socket
 - com.ionic.keyboard
 - org.apache.cordova.console
 - org.apache.cordova.device
+
+To install plugins,
+
+```
+cordova plugin add com.tlantic.plugins.socket
+```
