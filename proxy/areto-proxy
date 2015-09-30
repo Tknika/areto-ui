@@ -128,7 +128,7 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
             self.client = client_module.Client(target_host, target_port)
             thread.start_new_thread(self.receive, ())
  
-        now=self.reference_timestamp
+        now=time.time()
         print "bidali php zerbitzarira:: "+datetime.fromtimestamp( int(now/1000)  ).strftime('%Y-%m-%d %H:%M:%S') +" cmd: "+str(cmd)
         self.client.send(cmd)
                 
@@ -144,7 +144,7 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
                     self.resp(r.strip())
     
     def resp(self,msg):
-        now=self.reference_timestamp
+        now=time.time()
         if not msg:
             return
         if (msg in self.no_broadcast ):
