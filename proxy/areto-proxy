@@ -129,7 +129,7 @@ class ParaninfoNamespace(BaseNamespace, RoomsMixin, BroadcastMixin):
             thread.start_new_thread(self.receive, ())
  
         now=time.time()
-        print "bidali php zerbitzarira:: "+datetime.fromtimestamp( int(now/1000)  ).strftime('%Y-%m-%d %H:%M:%S') +" cmd: "+str(cmd)
+        print "*1* bidali php zerbitzarira:: "+datetime.fromtimestamp( int(now/1000)  ).strftime('%Y-%m-%d %H:%M:%S') +" cmd: "+str(cmd)
         self.client.send(cmd)
                 
 

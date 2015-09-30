@@ -61,7 +61,7 @@ class Client():
     def send(self,cmd,timeout=5,tmin=0):
         conn=False
         try:
-            print "Client Class send cmd:::  " + str(cmd) + " to " + self.addr+":" + str(self.port)
+            #print "Client Class send cmd:::  " + str(cmd) + " to " + self.addr+":" + str(self.port)
             self.socket.send(str(cmd).strip()+"\n")
                     
         except socket.timeout, e:
