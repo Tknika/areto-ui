@@ -45,52 +45,27 @@ journalctl -u areto-proxy -f
 ### Installation
 
 Areto-UI is based on Ionic Framework. So first of all we need:
-- Node.js
-- Ionic Framework
+- [Node.js](https://nodejs.org/en/)
+- [Ionic Framework](http://ionicframework.com/)
 
 After installing Node and Ionic, you have to create a blank project and move the files generated to the areto-ui source:
 
 ```sh
 # Download it using git clone
 git clone git@github.com:Tknika/areto-ui.git
-cd areto-ui
+cd areto-ui/ui
 
-# Create an empty project and take the files
-ionic start ionic-blank blank
-cp -n -R ionic-blank/ ui/
+# Initialize the Ionic environment with plugins
+ionic platform add android
+
+# Install node dependencies
+npm install
 ```
 
 ### Testing
 
-You can test the app using Ionic itself:
+You can test the application with Ionic serve:
 
-```sh
-cd ui/
+```
 ionic serve
-```
-
-### Required modules and plugins
-
-We're using the following **node modules**:
-- bower
-- grunt
-- grunt-angular-gettext
-- socket.io
-
-To install Node modules:
-
-```
-npm install bower
-```
-
-Ionic plugins:
-- com.tlantic.plugins.socket
-- com.ionic.keyboard
-- org.apache.cordova.console
-- org.apache.cordova.device
-
-To install plugins,
-
-```
-cordova plugin add com.tlantic.plugins.socket
 ```
