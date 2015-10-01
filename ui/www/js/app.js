@@ -677,7 +677,8 @@ return {
                 'id_button_nagusia_feedback_atril','id_button_nagusia_feedback_mostrar_contraparte_y_nuestra_imagen');
             }else if(type=='sarrera'){
                 botoi_array=new Array('id_button_nagusia_sarrera_dvd','id_button_nagusia_sarrera_camara_de_documentos','id_button_nagusia_sarrera_portatil1'
-                ,'id_button_nagusia_sarrera_portatil2','id_button_nagusia_sarrera_portatil3','id_button_nagusia_sarrera_pcsuelo','id_button_nagusia_sarrera_atril');
+                ,'id_button_nagusia_sarrera_portatil2','id_button_nagusia_sarrera_portatil3','id_button_nagusia_sarrera_pcsuelo','id_button_nagusia_sarrera_atril'
+                ,'id_button_nagusia_sarrera_camara','id_button_nagusia_sarrera_pip');
             }else if(type=='plasma'){
                 botoi_array=new Array('id_button_nagusia_plasma_dvd','id_button_nagusia_plasma_camara_de_documentos','id_button_nagusia_plasma_portatil1'
                 ,'id_button_nagusia_plasma_portatil2','id_button_nagusia_plasma_portatil3','id_button_nagusia_plasma_pcsuelo','id_button_nagusia_plasma_atril'

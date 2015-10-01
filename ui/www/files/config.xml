@@ -238,6 +238,8 @@
 					<elem name="camara_de_documentos" msg="PANTALLA_ENTRADA:CAMARA_DE_DOCUMENTOS" visible="1" print_text="CAMARA_DE_DOCUMENTOS"/>
 					<elem name="dvdgrab" msg="PANTALLA_ENTRADA:DVDGRAB" visible="1" print_text="DVDGRAB"/>
 					<elem name="atril" msg="PANTALLA_ENTRADA:ATRIL" visible="1" print_text="ATRIL"/>
+					<elem name="camara" msg="PANTALLA_ENTRADA:CAMARA" visible="1" print_text="CAMARA"/>
+                    <elem name="pip" msg="PANTALLA_ENTRADA:PIP" visible="1" print_text="PIP"/>
 				</panel>
 			</object>
 			<object name="pantalla_electrica" type="pantalla_electrica" msg="DISPOSITIVO:PANTALLA_ELECTRICA" visible="1" print_text="electrica" title="PANTALLA_ELECTRICA">

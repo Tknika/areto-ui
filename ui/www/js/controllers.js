@@ -602,6 +602,15 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
         $funciones.funciones_bidali_botoi_ebentua(1,event.target.id,$funciones,$timeout);
         send_nagusia_sarrera_atril_message(xml_data,$funciones);
     }
+    //intelsat-2015
+    $scope.nagusia_sarrera_kamera_click=function(event){
+        $funciones.funciones_bidali_botoi_ebentua(1,event.target.id,$funciones,$timeout);
+        send_nagusia_sarrera_kamera_message(xml_data,$funciones);
+    }
+    $scope.nagusia_sarrera_pip_click=function(event){
+        $funciones.funciones_bidali_botoi_ebentua(1,event.target.id,$funciones,$timeout);
+        send_nagusia_sarrera_pip_message(xml_data,$funciones);
+    }
     $scope.nagusia_sarrera_dvd_mouseup=function(event){
         $funciones.funciones_bidali_botoi_ebentua(2,event.target.id,$funciones,$timeout);
     }
@@ -627,6 +636,13 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
         $funciones.funciones_bidali_botoi_ebentua(2,event.target.id,$funciones,$timeout);
     }
     $scope.nagusia_sarrera_atril_mouseup=function(event){
+        $funciones.funciones_bidali_botoi_ebentua(2,event.target.id,$funciones,$timeout);
+    }
+    //intelsat-2015
+    $scope.nagusia_sarrera_kamera_mouseup=function(event){
+        $funciones.funciones_bidali_botoi_ebentua(2,event.target.id,$funciones,$timeout);
+    }
+    $scope.nagusia_sarrera_pip_mouseup=function(event){
         $funciones.funciones_bidali_botoi_ebentua(2,event.target.id,$funciones,$timeout);
     }
     $scope.sarrera_piztu_toggle_change=function(){
@@ -3548,4 +3564,14 @@ function send_nagusia_plasma_kamera1_message(xml_data,$funciones){
 function send_nagusia_plasma_kamera2_message(xml_data,$funciones){  
   var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'plasma','seleccion_en_pizarra','camara2',$funciones);
   $funciones.send_xml(xml_string);   
+}
+//intelsat-2015
+function send_nagusia_sarrera_kamera_message(xml_data,$funciones){
+  var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'pantalla_entrada','seleccion_en_pizarra','camara',$funciones);    
+  $funciones.send_xml(xml_string);  
+}
+//intelsat-2015
+function send_nagusia_sarrera_pip_message(xml_data,$funciones){
+  var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'pantalla_entrada','seleccion_en_pizarra','pip',$funciones);      
+  $funciones.send_xml(xml_string);  
 }
