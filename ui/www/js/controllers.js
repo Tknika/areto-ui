@@ -2575,7 +2575,7 @@ function menu_mostrar_ocultar_tratatu(mezu_v,items_menu,$rootScope){
                         angular.element(document.querySelector('#ion_side_menu_custom_nagusia')).css('display','block');
 			break;
 		case "VIDEOCONFERENCIA" :
-			if(items_menu!=undefined && items_menu!=null){
+			/*if(items_menu!=undefined && items_menu!=null){
 				if (mezu_v[3] == "TRUE") {
 	                            set_menu_ion_item_enabled('deitu_eskegi',true,items_menu,'id_ion_item_deitu_eskegi_menu');
 				} else {                            
@@ -2583,7 +2583,7 @@ function menu_mostrar_ocultar_tratatu(mezu_v,items_menu,$rootScope){
 				}
 	                        //broadcast_set_menu_nagusia_items_enabled($rootScope);
 	                        set_menu_nagusia_items_enabled(items_menu);
-			}
+			}*/
 			break;
 		case "OCULTAR" :
                         /*angular.element(document.querySelector('#ion_side_menu_custom')).css('display','none');
