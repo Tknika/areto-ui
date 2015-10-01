@@ -659,10 +659,10 @@ return {
             if(!enabled){
                 angular.element(document.querySelector(id_elem)).addClass('disabled');
             }else{
-                angular.element(document.querySelector(id_elem)).removeClass('disabled');
-                //intelsat-2015
-                angular.element(document.querySelector(id_elem)).removeClass('active');
-            }    
+                angular.element(document.querySelector(id_elem)).removeClass('disabled');                
+            }
+            //intelsat-2015
+            angular.element(document.querySelector(id_elem)).removeClass('active');
         },funciones_set_nagusia_proiektorea_all_enabled:function(enabled,$funciones,type){
             var botoi_array=new Array();
             if(type==null){

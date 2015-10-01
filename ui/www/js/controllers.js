@@ -2106,7 +2106,7 @@ function create_socket(ip,port_in,$scope,$rootScope,$funciones,socket_log,$state
   $rootScope.socket.on('result',function(message){
     //alert('result='+message);
 	/*if(socket_log.log==undefined){
-		alert('null');
+		alert('null');fsistema
 	}*/  
     call_filtro_msg(message,$state,$rootScope,$ionicPopup,gettextCatalog,$scope,xml_data,$funciones,konfig,$timeout,items_menu,socket_log);    
   });
@@ -2577,7 +2577,7 @@ function menu_mostrar_ocultar_tratatu(mezu_v,items_menu,$rootScope){
 		case "VIDEOCONFERENCIA" :
 			if (mezu_v[3] == "TRUE") {
                             set_menu_ion_item_enabled('deitu_eskegi',true,items_menu,'id_ion_item_deitu_eskegi_menu');
-			} else {
+			} else {                            
                             set_menu_ion_item_enabled('deitu_eskegi',false,items_menu,'id_ion_item_deitu_eskegi_menu');
 			}
                         //broadcast_set_menu_nagusia_items_enabled($rootScope);
