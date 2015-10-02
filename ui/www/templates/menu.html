@@ -3,23 +3,23 @@
    <!--NavCtrl gehitu da-->
   <ion-side-menu-content>
     <!--intelsat-2015-->
-    <!--  
+    <!--
     <ion-nav-bar class="bar-stable">
     -->
     <ion-nav-bar class="bar-positive">
-      <!--  
+      <!--
       <ion-nav-back-button>
       </ion-nav-back-button>
       -->
       <ion-nav-buttons side="left">
-      
+
         <!--intelsat-2015-->
         <!--showMenu gehitu da-->
-        
+
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
       </ion-nav-buttons>
-      
+
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
@@ -30,24 +30,24 @@
   <ion-side-menu side="left" expose-aside-when="large" class="ion_side_menu_custom" id="ion_side_menu_custom">
   -->
   <ion-side-menu side="left" class="ion_side_menu_custom" id="ion_side_menu_custom">
-  
-    <!--intelsat-2015-->  
-    <!--  
+
+    <!--intelsat-2015-->
+    <!--
     <ion-header-bar class="bar-stable">
     -->
-    <ion-header-bar class="bar bar-header bar-assertive">    
+    <ion-header-bar class="bar bar-header bar-assertive">
       <h1 class="title"></h1>
     </ion-header-bar>
     <!--intelsat-2015 has-header gehitu da-->
     <ion-content has-header="true">
       <ion-list>
-        <!--intelsat-2015  
+        <!--intelsat-2015
         <ion-item nav-clear menu-close ng-click="login()">
           Login
         </ion-item>
         -->
         <ion-item id="id_ion_item_ongi_etorri_menu" nav-clear menu-close href="#/app/ongi_etorri" ng-click="on_ongi_etorri_menu_click()" ng-hide="false">
-          <translate>Ongi Etorri</translate>
+          <translate>Hasiera</translate>
         </ion-item>
         <ion-item id="id_ion_item_hasiera_menu" nav-clear menu-close href="#/app/hasiera" ng-click="on_hasiera_menu_click()">
           <translate>Eszenarioak</translate>
@@ -69,9 +69,11 @@
         <ion-item id="id_ion_item_argiak_menu" nav-clear menu-close href="#/app/argiak" ng-click="on_argiak_menu_click()">
           <translate>Argiak</translate>
         </ion-item>
+        <!--
         <ion-item id="id_ion_item_log_menu" nav-clear menu-close href="#/app/log" ng-click="on_log_menu_click()">
           Log
         </ion-item>
+      -->
         <ion-item id="id_ion_item_itzali_menu" nav-clear menu-close href="#/app/itzali" ng-click="on_itzali_menu_click()">
           <translate>Itzali</translate>
         </ion-item>
