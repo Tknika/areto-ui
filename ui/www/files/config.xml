@@ -206,6 +206,8 @@
 					<elem name="mostrar_nuestra_imagen" msg="PANTALLA_PRESIDENCIA:MOSTRAR_NUESTRA_IMAGEN" visible="1" print_text="MOSTRAR_NUESTRA_IMAGEN"/>
 					<elem name="mostrar_contraparte_y_nuestra_imagen" msg="PANTALLA_PRESIDENCIA:MOSTRAR_CONTRAPARTE_Y_NUESTRA_IMAGEN" visible="1" print_text="CONTRA_PARTE_Y_NUESTRA_IMAGEN"/>
 					<elem name="pcsuelo" msg="PANTALLA_PRESIDENCIA:PCSUELO" visible="0" print_text="PCSUELO"/>
+					<elem name="erdibitua" msg="PANTALLA_PRESIDENCIA:ERDIBITUA" visible="1" print_text="ERDIBITUA"/>
+					<elem name="bakarra" msg="PANTALLA_PRESIDENCIA:BAKARRA" visible="1" print_text="BAKARRA"/>
 				</panel>
 				<panel name="seleccion_en_pizarra" x="0" y="294" visible="1" feed="0" print_text="">	
 					<elem name="dvd" msg="PANTALLA_PRESIDENCIA:DVD" visible="1" print_text="DVD"/>
@@ -217,12 +219,17 @@
 					<elem name="camara_de_documentos" msg="PANTALLA_PRESIDENCIA:CAMARA_DE_DOCUMENTOS" visible="1" print_text="CAMARA_DE_DOCUMENTOS"/>
 					<elem name="dvdgrab" msg="PANTALLA_PRESIDENCIA:DVDGRAB" visible="1" print_text="DVDGRAB"/>
 					<elem name="atril" msg="PANTALLA_PRESIDENCIA:ATRIL" visible="1" print_text="ATRIL"/>
+					
 				</panel>
 			</object>
 			<object name="pantalla_entrada" type="pantalla_entrada" msg="DISPOSITIVO:PANTALLA_ENTRADA" visible="1" print_text="entrada" title="PANTALLA_ENTRADA">
 				<panel name="encender_apagar_pantalla" x="0" y="0" visible="1" print_text="ENCENDER_APAGAR_PANTALLA">	
 					<elem name="encender" msg="PANTALLA_ENTRADA:ENCENDER" feed="1" visible="1" print_text="ENCENDER"/>
 					<elem name="apagar" msg="PANTALLA_ENTRADA:APAGAR" feed="1" visible="1" print_text="APAGAR"/>
+				</panel>
+				<panel name="imagen_a_mostrar" x="0" y="105" visible="1" feed="0" print_text="IMAGEN_A_MOSTRAR">	
+					<elem name="erdibitua" msg="PANTALLA_ENTRADA:ERDIBITUA" visible="1" print_text="ERDIBITUA"/>
+					<elem name="bakarra" msg="PANTALLA_ENTRADA:BAKARRA" visible="1" print_text="BAKARRA"/>
 				</panel>
 				<panel name="entrada_abajo" x="0" y="105" visible="0" print_text="">	
 					<elem name="dvd" msg="PANTALLA_ENTRADA:DVD" visible="1" print_text="DVD"/>
@@ -238,8 +245,11 @@
 					<elem name="camara_de_documentos" msg="PANTALLA_ENTRADA:CAMARA_DE_DOCUMENTOS" visible="1" print_text="CAMARA_DE_DOCUMENTOS"/>
 					<elem name="dvdgrab" msg="PANTALLA_ENTRADA:DVDGRAB" visible="1" print_text="DVDGRAB"/>
 					<elem name="atril" msg="PANTALLA_ENTRADA:ATRIL" visible="1" print_text="ATRIL"/>
-					<elem name="camara" msg="PANTALLA_ENTRADA:CAMARA" visible="1" print_text="CAMARA"/>
-                    <elem name="pip" msg="PANTALLA_ENTRADA:PIP" visible="1" print_text="PIP"/>
+					<elem name="camara" msg="PANTALLA_ENTRADA:CAMARA" visible="1" print_text="CAMARA"/>	                       
+				</panel>
+		    
+		    
+		    
 				</panel>
 			</object>
 			<object name="pantalla_electrica" type="pantalla_electrica" msg="DISPOSITIVO:PANTALLA_ELECTRICA" visible="1" print_text="electrica" title="PANTALLA_ELECTRICA">

@@ -18,7 +18,7 @@
                 <div class="col col-50">
                   <button id="id_button_nagusia_sarrera_itzali" class="button button-block" ng-click="nagusia_sarrera_itzali_click($event);" translate>ITZALI</button>
                 </div>                
-            </div>
+            </div>            
             <div class="row">
                 <div class="col col_flex_none">
                     <ion-toggle toggle-class="toggle-calm" ng-model=sarrera_piztu ng-disabled=sarrera_piztu_disabled ng-change="sarrera_piztu_toggle_change()">&nbsp;</ion-toggle>
@@ -28,6 +28,17 @@
                 </div>
             </div>             
         </div>
+        <div id="id_div_sarrera_erakusteko_imajina">   
+                <h4 translate>ERAKUSTEKO IMAJINA</h4>            
+                <div class="row">        
+                    <div class="col col-50">
+                        <button id="id_button_nagusia_sarrera_erdibitua" class="button button-block" ng-click="nagusia_sarrera_erdibitua_click();" translate>P. ERDIBITUA</button>
+                    </div>
+                    <div class="col col-50">
+                        <button id="id_button_nagusia_sarrera_bakarra" class="button button-block" ng-click="nagusia_sarrera_bakarra_click();" translate>P. BAKARRA</button>
+                    </div>               
+                </div>
+        </div>    
         <div id="id_div_sarrera_aukeratu">   
           <h4 translate>AUKERATU</h4>
             <div class="row">
@@ -72,9 +83,11 @@
                 <div class="col col-50">
                   <button id="id_button_nagusia_sarrera_camara" class="button button-block" ng-click="nagusia_sarrera_kamera_click($event);" ng-mouseup="nagusia_sarrera_kamera_mouseup($event);" translate>KAMERA</button>
                 </div>
+                <!--
                 <div class="col col-50">
                   <button id="id_button_nagusia_sarrera_pip" class="button button-block" ng-click="nagusia_sarrera_pip_click($event);" ng-mouseup="nagusia_sarrera_pip_mouseup($event);" translate>PIP</button>
-                </div>               
+                </div>
+                -->
           </div>
         </div>
         </div>

@@ -607,6 +607,16 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
         $funciones.funciones_bidali_botoi_ebentua(1,event.target.id,$funciones,$timeout);
         send_nagusia_sarrera_kamera_message(xml_data,$funciones);
     }
+    //intelsat-2015
+    $scope.nagusia_sarrera_erdibitua_click=function(){
+        //$funciones.funciones_bidali_botoi_ebentua(1,event.target.id,$funciones,$timeout);
+        send_nagusia_sarrera_erdibitua_message(xml_data,$funciones);
+    }
+    //intelsat-2015
+    $scope.nagusia_sarrera_bakarra_click=function(){
+        //$funciones.funciones_bidali_botoi_ebentua(1,event.target.id,$funciones,$timeout);
+        send_nagusia_sarrera_bakarra_message(xml_data,$funciones);
+    }
     $scope.nagusia_sarrera_pip_click=function(event){
         $funciones.funciones_bidali_botoi_ebentua(1,event.target.id,$funciones,$timeout);
         send_nagusia_sarrera_pip_message(xml_data,$funciones);
@@ -760,7 +770,16 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
     }
     $scope.nagusia_feedback_solaskide_gure_imajina_click=function(){
         send_nagusia_feedback_solaskide_gure_imajina_message(xml_data,$funciones);
-    }    
+    }
+    $scope.nagusia_feedback_erdibitua_click=function(){
+        send_nagusia_feedback_erdibitua_message(xml_data,$funciones);
+    }
+    $scope.nagusia_feedback_bakarra_click=function(){
+        send_nagusia_feedback_bakarra_message(xml_data,$funciones);
+    }
+    $scope.nagusia_feedback_kamera_click=function(){
+        send_nagusia_feedback_kamera_message(xml_data,$funciones);
+    }
     $scope.feedback_piztu_toggle_change=function(){
         if($scope.feedback_piztu==true){
             $scope.feedback_piztu=false;
@@ -2575,15 +2594,16 @@ function menu_mostrar_ocultar_tratatu(mezu_v,items_menu,$rootScope){
                         angular.element(document.querySelector('#ion_side_menu_custom_nagusia')).css('display','block');
 			break;
 		case "VIDEOCONFERENCIA" :
-			/*if(items_menu!=undefined && items_menu!=null){
-				if (mezu_v[3] == "TRUE") {
-	                            set_menu_ion_item_enabled('deitu_eskegi',true,items_menu,'id_ion_item_deitu_eskegi_menu');
-				} else {                            
-	                            set_menu_ion_item_enabled('deitu_eskegi',false,items_menu,'id_ion_item_deitu_eskegi_menu');
-				}
-	                        //broadcast_set_menu_nagusia_items_enabled($rootScope);
-	                        set_menu_nagusia_items_enabled(items_menu);
-			}*/
+                        //intelsat-2015
+                        if(items_menu!=undefined && items_menu!=null){
+                            if (mezu_v[3] == "TRUE") {
+                                set_menu_ion_item_enabled('deitu_eskegi',true,items_menu,'id_ion_item_deitu_eskegi_menu');
+                            } else {                            
+                                set_menu_ion_item_enabled('deitu_eskegi',false,items_menu,'id_ion_item_deitu_eskegi_menu');
+                            }
+                            //broadcast_set_menu_nagusia_items_enabled($rootScope);
+                            set_menu_nagusia_items_enabled(items_menu);
+                        }
 			break;
 		case "OCULTAR" :
                         /*angular.element(document.querySelector('#ion_side_menu_custom')).css('display','none');
@@ -3575,5 +3595,30 @@ function send_nagusia_sarrera_kamera_message(xml_data,$funciones){
 //intelsat-2015
 function send_nagusia_sarrera_pip_message(xml_data,$funciones){
   var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'pantalla_entrada','seleccion_en_pizarra','pip',$funciones);      
+  $funciones.send_xml(xml_string);  
+}
+//intelsat-2015
+function send_nagusia_feedback_erdibitua_message(xml_data,$funciones){
+  var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'pantalla_presidencia','imagen_a_mostrar','erdibitua',$funciones);      
+  $funciones.send_xml(xml_string);  
+}
+//intelsat-2015
+function send_nagusia_feedback_bakarra_message(xml_data,$funciones){
+  var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'pantalla_presidencia','imagen_a_mostrar','bakarra',$funciones);      
+  $funciones.send_xml(xml_string);  
+}
+//intelsat-2015
+function send_nagusia_feedback_kamera_message(xml_data,$funciones){
+  var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'pantalla_presidencia','seleccion_en_pizarra','camara',$funciones);      
+  $funciones.send_xml(xml_string);  
+}
+//intelsat-2015
+function send_nagusia_sarrera_erdibitua_message(xml_data,$funciones){
+  var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'pantalla_entrada','imagen_a_mostrar','erdibitua',$funciones);      
+  $funciones.send_xml(xml_string);  
+}
+//intelsat-2015
+function send_nagusia_sarrera_bakarra_message(xml_data,$funciones){
+  var xml_string=get_send_nagusia_panel_elem_xml_string(xml_data,'pantalla_entrada','imagen_a_mostrar','bakarra',$funciones);      
   $funciones.send_xml(xml_string);  
 }
