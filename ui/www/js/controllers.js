@@ -679,7 +679,7 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
         $scope.sarrera_piztu_disabled=false;
         $scope.sarrera_piztu=true;
         $scope.sarrera_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
-        //$scope.$apply();
+        $scope.$apply();
         konfig.bakup_sarrera_piztu_disabled=false;
         konfig.bakup_sarrera_piztu=true;
         konfig.bakup_sarrera_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
@@ -804,7 +804,7 @@ load_paraninfo_xml($http,xml_data,konfig,$scope,$rootScope,$funciones,socket_log
         $scope.feedback_piztu_disabled=false;
         $scope.feedback_piztu=true;
         $scope.feedback_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
-        //$scope.$apply();
+        $scope.$apply();
         konfig.bakup_feedback_piztu_disabled=false;
         konfig.bakup_feedback_piztu=true;
         konfig.bakup_feedback_piztu_text=$funciones.get_piztuta_text(gettextCatalog);
