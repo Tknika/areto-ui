@@ -219,7 +219,7 @@
 					<elem name="camara_de_documentos" msg="PANTALLA_PRESIDENCIA:CAMARA_DE_DOCUMENTOS" visible="1" print_text="CAMARA_DE_DOCUMENTOS"/>
 					<elem name="dvdgrab" msg="PANTALLA_PRESIDENCIA:DVDGRAB" visible="1" print_text="DVDGRAB"/>
 					<elem name="atril" msg="PANTALLA_PRESIDENCIA:ATRIL" visible="1" print_text="ATRIL"/>
-					
+					<elem name="camara" msg="PANTALLA_PRESIDENCIA:CAMARA" visible="1" print_text="CAMARA"/>
 				</panel>
 			</object>
 			<object name="pantalla_entrada" type="pantalla_entrada" msg="DISPOSITIVO:PANTALLA_ENTRADA" visible="1" print_text="entrada" title="PANTALLA_ENTRADA">
@@ -245,11 +245,8 @@
 					<elem name="camara_de_documentos" msg="PANTALLA_ENTRADA:CAMARA_DE_DOCUMENTOS" visible="1" print_text="CAMARA_DE_DOCUMENTOS"/>
 					<elem name="dvdgrab" msg="PANTALLA_ENTRADA:DVDGRAB" visible="1" print_text="DVDGRAB"/>
 					<elem name="atril" msg="PANTALLA_ENTRADA:ATRIL" visible="1" print_text="ATRIL"/>
-					<elem name="camara" msg="PANTALLA_ENTRADA:CAMARA" visible="1" print_text="CAMARA"/>	                       
-				</panel>
-		    
-		    
-		    
+					<elem name="camara" msg="PANTALLA_ENTRADA:CAMARA" visible="1" print_text="CAMARA"/>
+                    <elem name="pip" msg="PANTALLA_ENTRADA:PIP" visible="1" print_text="PIP"/>
 				</panel>
 			</object>
 			<object name="pantalla_electrica" type="pantalla_electrica" msg="DISPOSITIVO:PANTALLA_ELECTRICA" visible="1" print_text="electrica" title="PANTALLA_ELECTRICA">
@@ -428,7 +425,7 @@
 					<elem name="camara_de_documentos" msg="PLASMA:CAMARA_DE_DOCUMENTOS" visible="1" print_text="CAMARA_DE_DOCUMENTOS"/>
 					<elem name="dvdgrab" msg="PLASMA:DVDGRAB" visible="1" print_text="DVDGRAB"/>
 					<elem name="atril" msg="PLASMA:ATRIL" visible="1" print_text="ATRIL"/>
-				    <elem name="camara1" msg="PLASMA:CAMARA_1" visible="1" print_text="CAMARA1"/>
+				        <elem name="camara1" msg="PLASMA:CAMARA_1" visible="1" print_text="CAMARA1"/>
 				</panel>
 			</object>
 			<object name="red_think_client" type="red_think_client" msg="DISPOSITIVO:RED_THINK_CLIENT" visible="1" print_text="RED_THINK_CLIENT" title="RED_THINK_CLIENT">
