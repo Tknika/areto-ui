@@ -47,6 +47,11 @@ journalctl -u areto-proxy -f
 Areto-UI is based on Ionic Framework. So first of all we need:
 - [Node.js](https://nodejs.org/en/)
 - [Ionic Framework](http://ionicframework.com/)
+- [Android SDK](http://developer.android.com/sdk/index.html#Other)
+
+```sh
+sudo npm install -g cordova ionic
+```
 
 After installing Node and Ionic, you can download de source and configure the environment: 
 
