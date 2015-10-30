@@ -49,6 +49,8 @@ Areto-UI is based on Ionic Framework. So first of all we need:
 - [Ionic Framework](http://ionicframework.com/)
 - [Android SDK](http://developer.android.com/sdk/index.html#Other)
 
+More info about configuring Android SDK in your system: https://spring.io/guides/gs/android/
+
 ```sh
 sudo npm install -g cordova ionic
 ```
@@ -65,6 +67,11 @@ ionic platform add android
 
 # Install node dependencies
 npm install
+
+# Generate APKs
+ionic build android
+# or
+ionic build android --release
 ```
 
 ### Testing
@@ -73,4 +80,10 @@ You can test the application with Ionic serve:
 
 ```
 ionic serve
+```
+
+Or if you have Android SDK correctly installed:
+
+```
+ionic emulate android
 ```
