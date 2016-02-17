@@ -15,7 +15,7 @@ We're using [Socket.IO](http://socket.io/) as a real-time engine.
 
 ## Proxy
 
-**areto-proxy** is a Python daemon who works as a Socket.IO server app and talks to **areto-server**. For testing purposes you can run it directly with Python:
+**areto-proxy** is a Python daemon who works as a Socket.IO server app and talks to [**areto-server**](https://github.com/Tknika/areto-server). For testing purposes you can run it directly with Python:
 
 ```sh
 python proxy/areto-proxy
