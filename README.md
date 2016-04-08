@@ -68,6 +68,9 @@ ionic platform add android
 # Install node dependencies
 npm install
 
+# Before generate android package:
+export ANDROID_HOME=/home/<user>/Android/Sdk/
+
 # Generate APKs
 ionic build android
 # or
